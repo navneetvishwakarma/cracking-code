@@ -17,12 +17,18 @@ public class LinkedList {
         return head;
     }
 
+    public Node add(Node node) {
+        if (node.getNext() == null) {
+            node.setNext(head.getNext());
+        }
+        head.setNext(node);
+        return node;
+    }
+
     public Node add(Integer value) {
         Node node = new Node();
         node.setValue(value);
-        node.setNext(head.getNext());
-        head.setNext(node);
-        return node;
+        return add(node);
     }
 
     private void print(Node node) {
@@ -46,9 +52,8 @@ class Node {
     Node() {
     }
 
-    Node(Integer value, Node next) {
+    Node(Integer value) {
         this.value = value;
-        this.next = next;
     }
 
     public Integer getValue() {
