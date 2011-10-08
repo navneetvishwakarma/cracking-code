@@ -31,6 +31,17 @@ public class LinkedList {
         return add(node);
     }
 
+    public int remove() {
+        int val = -1;
+        if(head.getNext() == null) {
+            throw new IllegalArgumentException("No more free nodes left");
+        } else {
+            val = head.getNext().getValue();
+            head.setNext(head.getNext().getNext());
+        }
+        return val;
+    }
+
     private void print(Node node) {
         if(node == null) {
             return;
