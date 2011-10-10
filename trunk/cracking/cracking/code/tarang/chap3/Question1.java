@@ -62,7 +62,7 @@ public class Question1 {
 
 
 class Stacks {
-    private StackNode[] arr;
+    private StacksNode[] arr;
     private LinkedList freelist;
     private int[] tops;
 
@@ -71,7 +71,7 @@ class Stacks {
         for(int i = 0; i < tops.length; i++) {
             tops[i] = -1;
         }
-        arr = new StackNode[numOfStacks * 5];
+        arr = new StacksNode[numOfStacks * 5];
         // create the freelist
         freelist = new LinkedList();
         for(int i = numOfStacks * 5 - 1; i >= 0; i--) {
@@ -81,7 +81,7 @@ class Stacks {
 
     public void push(int value, int stacknumber) {
         stacknumber -= 1;
-        StackNode node = new StackNode(value);
+        StacksNode node = new StacksNode(value);
         if(tops[stacknumber] != -1) {
             // had a top so set next to the current top
             node.setNext(tops[stacknumber]);
@@ -98,7 +98,7 @@ class Stacks {
         if(index == -1) {
             throw new IllegalArgumentException("Nothing left to pop");
         }
-        StackNode node = arr[index];
+        StacksNode node = arr[index];
         freelist.add(index);
         tops[stacknumber] = node.getNext();
         return node.getValue();
@@ -124,7 +124,7 @@ class Stacks {
                 }
                 stacknumber++;
             }
-            for(StackNode node : arr) {
+            for(StacksNode node : arr) {
                 str += node + " ";
             }
             str += "\n";
@@ -133,11 +133,11 @@ class Stacks {
     }
 }
 
-class StackNode {
+class StacksNode {
     private int value;
     private int next = -1;
 
-    StackNode(int value) {
+    StacksNode(int value) {
         this.value = value;
     }
 
