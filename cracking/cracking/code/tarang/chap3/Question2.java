@@ -25,23 +25,23 @@ public class Question2 {
 }
 
 class MinStack {
-    private MinStackNode top;
-    private MinStackNode min;
+    private StackNode top;
+    private StackNode min;
 
     public MinStack() {
 
     }
 
     public void push(int value) {
-        MinStackNode node = new MinStackNode(value);
+        StackNode node = new StackNode(value);
         if(top != null) {
             node.setNext(top);
         }
         top = node;
         if(min == null) {
-            min = new MinStackNode(value);
+            min = new StackNode(value);
         } else if(min.getValue() >= value) {
-            node = new MinStackNode(value);
+            node = new StackNode(value);
             node.setNext(min);
             min = node;
         }
@@ -71,7 +71,7 @@ class MinStack {
 
     @Override
     public String toString() {
-        MinStackNode node = top;
+        StackNode node = top;
         String str = "";
         while(node != null) {
             str += node.getValue() + " ";
@@ -84,30 +84,5 @@ class MinStack {
             node = node.getNext();
         }
         return str.trim();
-    }
-}
-
-class MinStackNode {
-    private int value;
-    private MinStackNode next;
-
-    MinStackNode(int value) {
-        this.value = value;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
-    }
-
-    public MinStackNode getNext() {
-        return next;
-    }
-
-    public void setNext(MinStackNode next) {
-        this.next = next;
     }
 }
