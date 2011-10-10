@@ -1,0 +1,153 @@
+1) Find if a binary tree is a binary search tree
+
+2) What is huffman coding (interviewer can explain it if you don't know). Write code to implement huffman coding of a string
+
+3) Reconstruct a BST given its preorder traversal. No extra space is allowed and accomplish this in O(n)
+
+4) Find the two numbers among a set of numbers whose difference is minimum. Follow up: what if the difference is an absolute value, then find the two numbers with minimum difference
+
+5) Find if the given string is a palindrome. E.g. "..AB ,, CD, ED. CB...A..." is a palindrome.
+
+6) You are given a binary tree that has many binary search trees as subtrees. Find the largest (in terms of nodes) binary search tree (subtree). You are given the root node to binary tree. (Binary tree is different from binary search tree).
+
+7) Find the minimum and maximum sum path in a binary tree
+
+8) If there is a n-digit, print the digits one by one without using temporary storage and how will you do it efficiently? Example: if the number is 1054 print: 1 0 5 4
+
+9) Given two integer arrays, find their intersection. E.g.: arr1 = {8, 15, 23, 32, 44, 91, 3}, arr2 = {18, 2, 32, 44, 91, 18} -> {32, 44, 91}
+
+10) Compose a sorted array from two already sorted arrays
+
+11) You have an infinite set of coordinates, find out the 10 points closest to the origin
+
+12) Reverse a doubly linked list
+
+13) Given a binary tree and a number X, find if there exists a path that sums to X. Note that the path may or may not start from the root
+
+14) Given a binary search tree with each node's structure as follows:
+
+struct Node
+{
+int data;
+Node left, right;
+Node successor;
+};
+
+and all successor pointers set to NULL. Traverse the BST and set sucessort pointers for each node.
+
+15) Find the maximum contiguous sum in a circular linked list.
+
+16) Given a number find a bigger number with the same digits otherwise return -1. E.g. 5678 -> 8754, 8765 -> -1
+
+17) Given an array of integers (can be both positive and negative), find 3 which multiply to give the largest product
+
+18) Given an array of size N consisting of 3 distinct numbers, how would you sort them using swapping in O(n)?
+
+19) Given pairs of employee-managers, construct an organizational tree of the company.
+E.g. e1:m1, e2:m1, e3:m1, e4:m2, e5:m2...
+
+20) Given an array, find out if there exist a subarray such that its sum is zero.
+
+21) Design a data structure that allows for two operations:
+add(i, x): add x to the ith element (sorted ith)
+sum(i): sum of the first i numbers
+
+Additional memory of O(n) is allows but the two operations should perform in O(log n)
+
+22) Write an algorithm to solve generalized "M liter and N liter jug problem" to check if K liter is possible from an M liter and N liter jug. E.g. M=3, N=4 and K=5. Its possible to measure 5 liter with the help of 3 and 4 liter jugs. Return true or false for parameters M, N and K.
+
+23) Give an algorithm for finding the shorted distance between two words in a text document.
+
+24) Given a set of intergers, find out if there exists a subset whose sum is equal to X.
+
+25) Given a binary tree, find minimum element at a given depth.
+
+26) You have an array in which ever number is repeated odd number of times except one , you have to give that with O(n) time complexity
+
+27) Given a modified BST where each node carries extra information of the total number of nodes below it. Find the Kth smallest number in O(logn) time.
+
+28) Given a set of strings, check whether it is possible to chain all of them. Two strings can be chained iff s1[n] == s2[0] || s2[0] == s1[n]
+
+29) A zero-indexed array A consisting of N integers is given. A triplet (P, Q, R) is triangular if and
+A[P] + A[Q] > A[R],
+A[Q] + A[R] > A[P],
+A[R] + A[P] > A[Q].
+For example, consider array A such that
+A[0] = 10 A[1] = 2 A[2] = 5
+A[3] = 1 A[4] = 8 A[5] = 20
+Triplet (0, 2, 4) is triangular.
+public int triangle(int[] A)
+that, given a zero-indexed array A consisting of N integers, returns 1 if there exists a triangular triplet for this array and returns 0 otherwise.
+Assume that:
+N is an integer within the range [0..100,000];
+each element of array A is an integer within the range[-2,147,483,648..2,147,483,647].
+For example, given array A such that
+A[0] = 10 A[1] = 2 A[2] = 5
+A[3] = 1 A[4] = 8 A[5] = 20
+the function should return 1, as explained above. Given arrayA such that
+A[0] = 10 A[1] = 50 A[2] = 5
+A[3] = 1
+the function should return 0.
+Expected worst-case time complexity: O(n log n)
+Expected worst-case space complexity: O(1)
+
+
+30) Given an array of integers, for each elemnt in the array find the closest greatest element to the right. Closest means the distance between two element's array indices must be minimum . Solution should be better then O(n log n) or better?
+
+31) Given a number X, return the smallest possible list of numbers whose squares sum up X.
+
+32) Code/Define an algorithm to find if a given string has balanced parentheses, where we have 3 types 1. ( ) 2. [ ] 3. { }. Example of Balanced - [{}](), Not balanced - ({)[}]
+
+33) In an NxN matrix whose rows and columns are in sorted order. Implement
+search(int[][] A, x) : returns (i,j) of matrix A where x is located otherwise return null
+median(int[][] A): return the median number
+
+34) Given an array which consists of elements in the following form :
+All the adjacent elements differ only by value -1 or +1.
+You are given an element. You need to search for its index.
+
+35)  Given a n-ary tree. A random leaf node will be selected.Imagine that you are now holding the tree with your hand from that node. All other nodes will now fall under gravity. Write a function to perform this transformation.
+
+36)
+
+Write a program to implement Boggle Game.
+You are given a 4x4 matrix of letters and a dictionary, find all the valid words in the matrix. Following are the conditions
+1. If a letter is used, it should not be used again in the same word search
+2. The word path can be of any direction
+3. There has to be a path of the letters forming the word( in other words all the letters in the word must have to adjacent to one another)
+
+Example:
+
+
+D A T H
+C G O A
+S A T L
+B E D G
+
+
+Some of the Valid words are:
+DATA, HALO, HALT, SAG, BEAT, TOTAL, GLOT, DAG
+
+
+Not valid words:
+DAGCD ( D cannot be used again)
+DOG ( There is no path between letters)
+
+37) Find height of a tree without using recursion
+
+38)
+
+Jump Game:
+Given an array start from the first element and reach the last by jumping. The jump length can be at most the value at the current position in the array. Optimum result is when u reach the goal in minimum number of jumps.
+For ex:
+Given array A = {2,3,1,1,4}
+possible ways to reach the end (index list)
+i) 0,2,3,4 (jump 2 to index 2, then jump 1 to index 3 then 1 to index 4)
+ii) 0,1,4 (jump 1 to index 1, then jump 3 to index 4)
+Since second solution has only 2 jumps it is the optimum result.
+
+39) Given an N-ary tree, find out if it is symmetric about the line drawn through the root node of the tree.
+
+40) Find the ith largest element in an array in O(n)
+
+
