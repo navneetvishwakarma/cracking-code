@@ -1,4 +1,4 @@
-package cracking.src.tarang.chap1;
+package tarang.chap1;
 
 import java.util.Arrays;
 

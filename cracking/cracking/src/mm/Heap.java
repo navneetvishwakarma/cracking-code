@@ -1,4 +1,4 @@
-package cracking.src.mm;
+package mm;
 
 
 /**

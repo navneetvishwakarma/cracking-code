@@ -9,9 +9,9 @@
  */
 
 
-package cracking.src.mm.chap3;
+package mm.chap3;
 
-import cracking.src.mm.Stack;
+import mm.Stack;
 
 import java.util.EmptyStackException;
 

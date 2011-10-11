@@ -1,6 +1,6 @@
-package cracking.src.tarang.chap3;
+package tarang.chap3;
 
-import cracking.src.tarang.chap2.LinkedList;
+import tarang.chap2.LinkedList;
 
 
 /**
