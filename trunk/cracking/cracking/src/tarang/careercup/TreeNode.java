@@ -7,9 +7,13 @@ package tarang.careercup;
  * @author tdesai
  */
 public class TreeNode {
+    private TreeNode parent;
     private int value;
     private TreeNode left;
     private TreeNode right;
+
+    public TreeNode() {
+    }
 
     public TreeNode(int value) {
         this.value = value;
@@ -43,6 +47,14 @@ public class TreeNode {
 
     public void setRight(TreeNode right) {
         this.right = right;
+    }
+
+    public TreeNode getParent() {
+        return parent;
+    }
+
+    public void setParent(TreeNode parent) {
+        this.parent = parent;
     }
 
     @Override

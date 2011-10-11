@@ -10,7 +10,7 @@
 
 6) Given a binary tree count the number of nodes at each level in the tree. Follow up: count the number of nodes below each node
 
-7) Find the minimum and maximum sum path in a binary tree
+7) Find the maximum sum path in a binary tree
 
 8) If there is a n-digit, print the digits one by one without using temporary storage and how will you do it efficiently? Example: if the number is 1054 print: 1 0 5 4
 
