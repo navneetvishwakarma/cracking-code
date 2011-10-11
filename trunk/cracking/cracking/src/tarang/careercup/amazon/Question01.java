@@ -1,6 +1,6 @@
-package cracking.src.tarang.careercup.amazon;
+package tarang.careercup.amazon;
 
-import cracking.src.tarang.careercup.TreeNode;
+import tarang.careercup.TreeNode;
 
 
 /**

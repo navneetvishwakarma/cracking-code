@@ -9,7 +9,7 @@
  */
 
 
-package cracking.src.mm.chap3;
+package mm.chap3;
 
 
 /**

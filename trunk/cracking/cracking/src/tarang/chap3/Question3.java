@@ -1,4 +1,4 @@
-package cracking.src.tarang.chap3;
+package tarang.chap3;
 
 import java.util.HashMap;
 import java.util.Map;
