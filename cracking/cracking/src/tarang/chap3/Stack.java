@@ -29,6 +29,17 @@ class Stack {
         return value;
     }
 
+    public int peek() {
+        if (top == null) {
+            throw new IllegalArgumentException("Stack is empty");
+        }
+        return top.getValue();
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
     public int getSize() {
         return size;
     }
