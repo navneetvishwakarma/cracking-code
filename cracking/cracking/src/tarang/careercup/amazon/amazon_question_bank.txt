@@ -8,7 +8,7 @@
 
 5) Find if the given string is a palindrome. E.g. "..AB ,, CD, ED. CB...A..." is a palindrome.
 
-6) You are given a binary tree that has many binary search trees as subtrees. Find the largest (in terms of nodes) binary search tree (subtree). You are given the root node to binary tree. (Binary tree is different from binary search tree).
+6) Given a binary tree count the number of nodes at each level in the tree.
 
 7) Find the minimum and maximum sum path in a binary tree
 
