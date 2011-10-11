@@ -8,7 +8,7 @@
 
 5) Find if the given string is a palindrome. E.g. "..AB ,, CD, ED. CB...A..." is a palindrome.
 
-6) Given a binary tree count the number of nodes at each level in the tree.
+6) Given a binary tree count the number of nodes at each level in the tree. Follow up: count the number of nodes below each node
 
 7) Find the minimum and maximum sum path in a binary tree
 
@@ -149,5 +149,6 @@ Since second solution has only 2 jumps it is the optimum result.
 39) Given an N-ary tree, find out if it is symmetric about the line drawn through the root node of the tree.
 
 40) Find the ith largest element in an array in O(n)
+
 
 
