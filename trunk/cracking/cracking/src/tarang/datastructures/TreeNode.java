@@ -7,12 +7,21 @@ package tarang.datastructures;
  * @author tdesai
  */
 public class TreeNode {
+    private TreeNode parent;
     private int value;
     private TreeNode left;
     private TreeNode right;
-    private TreeNode pred;
+    private TreeNode pred;  // for "find path in the tree" question
 
     public TreeNode() {
+    }
+
+    public TreeNode getParent() {
+        return parent;
+    }
+
+    public void setParent(TreeNode parent) {
+        this.parent = parent;
     }
 
     public TreeNode(int value) {
@@ -39,6 +48,9 @@ public class TreeNode {
 
     public void setLeft(TreeNode left) {
         this.left = left;
+        if (this.left != null) {
+            this.left.setParent(this);
+        }
     }
 
     public TreeNode getRight() {
@@ -47,6 +59,9 @@ public class TreeNode {
 
     public void setRight(TreeNode right) {
         this.right = right;
+        if(this.right != null) {
+            this.right.setParent(this);
+        }
     }
 
     public TreeNode getPred() {

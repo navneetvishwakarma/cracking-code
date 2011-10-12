@@ -14,8 +14,12 @@ public class Question03 {
         if (start <= end) {
             int mid = (int) Math.ceil((start + end) / 2.0);
             TreeNode node = new TreeNode(A[start]);
-            node.setLeft(reconstruct_preorder(A, start + 1, mid));
-            node.setRight(reconstruct_preorder(A, mid + 1, end));
+            TreeNode leftNode = reconstruct_preorder(A, start + 1, mid);
+            leftNode.setParent(node);
+            TreeNode rightNode = reconstruct_preorder(A, mid + 1, end);
+            rightNode.setParent(rightNode);
+            node.setLeft(leftNode);
+            node.setRight(rightNode);
             return node;
         } else {
             return null;
@@ -26,8 +30,12 @@ public class Question03 {
         if(start <= end) {
             int mid = (int) Math.ceil((start + end)/2.0);
             TreeNode node = new TreeNode(A[mid]);
-            node.setLeft(reconstruct_inorder(A, start, mid-1));
-            node.setRight(reconstruct_inorder(A, mid+1, end));
+            TreeNode leftNode = reconstruct_inorder(A, start, mid - 1);
+            leftNode.setParent(node);
+            TreeNode rightNode = reconstruct_inorder(A, mid + 1, end);
+            rightNode.setParent(node);
+            node.setLeft(leftNode);
+            node.setRight(rightNode);
             return node;
         } else {
             return null;
@@ -38,8 +46,12 @@ public class Question03 {
         if (start <= end) {
             int mid = (int) Math.ceil((start + end) / 2.0);
             TreeNode node = new TreeNode(A[end]);
-            node.setLeft(reconstruct_postorder(A, start, mid-1));
-            node.setRight(reconstruct_postorder(A, mid, end-1));
+            TreeNode leftNode = reconstruct_postorder(A, start, mid - 1);
+            leftNode.setParent(node);
+            TreeNode rightNode = reconstruct_postorder(A, mid, end - 1);
+            rightNode.setParent(node);
+            node.setLeft(leftNode);
+            node.setRight(rightNode);
             return node;
         } else {
             return null;
