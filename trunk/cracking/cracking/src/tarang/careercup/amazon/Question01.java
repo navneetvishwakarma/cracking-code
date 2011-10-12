@@ -10,6 +10,7 @@ import tarang.datastructures.TreeNode;
  */
 public class Question01 {
 
+    // O(n)
     public boolean check(TreeNode node) {
         if (node == null) {
             return true;
