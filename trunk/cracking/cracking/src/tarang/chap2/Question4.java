@@ -1,5 +1,8 @@
 package tarang.chap2;
 
+import tarang.datastructures.LinkedList;
+import tarang.datastructures.Node;
+
 
 /**
  * You have two numbers represented by a linked list, where each node contains a sin- gle digit	The digits are stored

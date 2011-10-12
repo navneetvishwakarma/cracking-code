@@ -1,5 +1,8 @@
 package tarang.chap2;
 
+import tarang.datastructures.LinkedList;
+import tarang.datastructures.Node;
+
 
 /**
  * Given a circular linked list, implement an algorithm which returns node at the beginning of the loop DEFINITION

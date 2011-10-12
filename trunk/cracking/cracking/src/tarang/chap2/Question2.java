@@ -1,5 +1,8 @@
 package tarang.chap2;
 
+import tarang.datastructures.LinkedList;
+import tarang.datastructures.Node;
+
 
 /**
  * Implement an algorithm to find the nth to last element of a singly linked list
