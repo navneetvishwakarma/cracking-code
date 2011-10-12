@@ -18,10 +18,10 @@ public class Question07 {
         int rightSum = countNodes(node.getRight());
         int sum = node.getValue();
         if(leftSum > rightSum) {
-            node.setRight(null);
+            node.setPred(node.getLeft());
             sum += leftSum;
         } else {
-            node.setLeft(null);
+            node.setPred(node.getRight());
             sum += rightSum;
         }
         return sum;
@@ -38,11 +38,7 @@ public class Question07 {
         while(curr != null) {
             count += curr.getValue();
             System.out.print(curr + " -> ");
-            if(curr.getLeft() != null) {
-                curr = curr.getLeft();
-            } else {
-                curr = curr.getRight();
-            }
+            curr = curr.getPred();
         }
         System.out.println();
         System.out.println("total: " + count);
