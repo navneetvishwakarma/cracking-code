@@ -1,4 +1,4 @@
-package tarang.careercup;
+package tarang.datastructures;
 
 
 /**

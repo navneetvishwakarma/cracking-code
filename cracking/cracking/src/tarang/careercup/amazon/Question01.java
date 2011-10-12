@@ -1,6 +1,6 @@
 package tarang.careercup.amazon;
 
-import tarang.careercup.TreeNode;
+import tarang.datastructures.TreeNode;
 
 
 /**

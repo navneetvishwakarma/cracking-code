@@ -1,5 +1,8 @@
 package tarang.chap2;
 
+import tarang.datastructures.LinkedList;
+import tarang.datastructures.Node;
+
 
 /**
  * Implement an algorithm to delete a node in the middle of a single linked list, given only access to that node

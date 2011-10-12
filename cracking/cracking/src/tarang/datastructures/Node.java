@@ -1,4 +1,4 @@
-package tarang.chap2;
+package tarang.datastructures;
 
 
 /**

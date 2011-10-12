@@ -1,5 +1,8 @@
 package tarang.chap2;
 
+import tarang.datastructures.LinkedList;
+import tarang.datastructures.Node;
+
 import java.util.HashMap;
 import java.util.Map;
 

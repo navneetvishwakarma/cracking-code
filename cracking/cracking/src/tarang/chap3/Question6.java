@@ -1,5 +1,7 @@
 package tarang.chap3;
 
+import tarang.datastructures.Stack;
+
 
 /**
  * Write a program to sort a stack in ascending order You should not make any assump- tions about how the stack is

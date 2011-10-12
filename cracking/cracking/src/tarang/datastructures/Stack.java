@@ -1,4 +1,4 @@
-package tarang.chap3;
+package tarang.datastructures;
 
 
 /**
@@ -6,7 +6,7 @@ package tarang.chap3;
  *
  * @author tdesai
  */
-class Stack {
+public class Stack {
     private StackNode top;
     private int size = 0;
 

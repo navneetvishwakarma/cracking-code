@@ -1,4 +1,4 @@
-package tarang.chap3;
+package tarang.datastructures;
 
 
 /**
@@ -6,11 +6,11 @@ package tarang.chap3;
  *
  * @author tdesai
  */
-public class StackNode {
+public class StacksNode {
     private int value;
-    private StackNode next;
+    private int next = -1;
 
-    StackNode(int value) {
+    StacksNode(int value) {
         this.value = value;
     }
 
@@ -22,11 +22,11 @@ public class StackNode {
         this.value = value;
     }
 
-    public StackNode getNext() {
+    public int getNext() {
         return next;
     }
 
-    public void setNext(StackNode next) {
+    public void setNext(int next) {
         this.next = next;
     }
 
