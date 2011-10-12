@@ -32,14 +32,14 @@ public class Question06 {
         return currNodeCnt;
     }
 
-    // count number of nodes under each node + 1
+    // count number of nodes under each node + 1 - O(n)
     public static Map<Integer, Integer> countNodes(TreeNode root) {
         Map<Integer, Integer> nodeCount = new HashMap<Integer, Integer>();
         countNodes(root, nodeCount);
         return nodeCount;
     }
 
-    // number of nodes at each level
+    // number of nodes at each level - O(n)
     public static Map<Integer, Integer> levelNodeCount(TreeNode root) {
         Map<Integer, Integer> levelNodes = new HashMap<Integer, Integer>();
         levelNodeCount(root, 0, levelNodes);

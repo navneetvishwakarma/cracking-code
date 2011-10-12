@@ -8,6 +8,7 @@ package tarang.careercup.amazon;
  */
 public class Question10 {
 
+    // O(n). where n = A.length + B.length
     public static int[] merge(int[] A, int[] B) {
         int[] C = new int[A.length + B.length];
         int index1 = A.length - 1;

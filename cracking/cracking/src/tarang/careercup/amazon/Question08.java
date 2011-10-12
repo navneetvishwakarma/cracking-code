@@ -9,6 +9,7 @@ package tarang.careercup.amazon;
  */
 public class Question08 {
 
+    // O(n)
     public static void print(int number) {
         if(number == 0) {
             return;

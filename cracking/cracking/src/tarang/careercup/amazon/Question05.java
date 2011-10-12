@@ -8,6 +8,7 @@ package tarang.careercup.amazon;
  */
 public class Question05 {
 
+    // O(n)
     public static boolean isPalindrome(char[] chars) {
         int start = 0;
         int end = chars.length - 1;
