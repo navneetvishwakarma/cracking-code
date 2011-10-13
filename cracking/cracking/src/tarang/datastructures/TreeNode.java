@@ -82,6 +82,29 @@ public class TreeNode {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        TreeNode treeNode = (TreeNode) o;
+
+        if (value != treeNode.value) {
+            return false;
+        }
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return value;
+    }
+
+    @Override
     public String toString() {
         // create a string structure of this subtree
         return str(this);
