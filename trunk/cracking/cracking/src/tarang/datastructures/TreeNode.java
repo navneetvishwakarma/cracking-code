@@ -16,6 +16,15 @@ public class TreeNode {
     public TreeNode() {
     }
 
+    public TreeNode(String str) {
+        // use string representation to recreate the tree
+        if(str == null || str.length() == 0) {
+            throw new IllegalArgumentException("cannot create a tree from null or empty string");
+        }
+        str = str.trim();
+        // create tree
+    }
+
     public TreeNode getParent() {
         return parent;
     }
@@ -74,6 +83,14 @@ public class TreeNode {
 
     @Override
     public String toString() {
-        return value + "";
+        // create a string structure of this subtree
+        return str(this);
+    }
+
+    private String str(TreeNode node) {
+        if(node == null) {
+            return "";
+        }
+        return " (" + node.getValue() + str(node.getLeft()) + str(node.getRight()) + ")";
     }
 }
