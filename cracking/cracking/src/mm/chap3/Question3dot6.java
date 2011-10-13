@@ -24,13 +24,16 @@ import java.util.EmptyStackException;
  */
 public class Question3dot6 {
     
+    
+    //O(n-square) algo
     public Stack sortMyWay(Stack a){
         Stack b = new Stack(a.count());
         
+        //for each element of stackA
         for(int i=0; i<a.count(); i++){
             int max = a.pop();
             
-            
+            //move everything from stackA to stackB, except the max 
             while(!a.isEmpty()){
                 int item = a.pop();
                 if(max < item){
@@ -41,11 +44,11 @@ public class Question3dot6 {
                 }
             }
             
+            //now push the max, then empty stackB into stackA 
             a.push(max);
             while(!b.isEmpty()){
                 a.push(b.pop());
             }
-            //System.out.println(a.toString2());
         }
 
         return a;
