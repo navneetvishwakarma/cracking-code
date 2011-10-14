@@ -16,7 +16,8 @@ import java.util.Map;
  */
 public class Question4 {
 
-    private static void levelLinkedList_internal(TreeNode node, int level, Map<Integer, LinkedList<TreeNode>> map) {
+    // O(n)
+    private static void findLevelLinkList_internal(TreeNode node, int level, Map<Integer, LinkedList<TreeNode>> map) {
         if(node == null) {
             return;
         }
@@ -26,20 +27,20 @@ public class Question4 {
             map.put(level, nodes);
         }
         nodes.add(node);
-        levelLinkedList_internal(node.getLeft(), level + 1, map);
-        levelLinkedList_internal(node.getRight(), level + 1, map);
+        findLevelLinkList_internal(node.getLeft(), level + 1, map);
+        findLevelLinkList_internal(node.getRight(), level + 1, map);
     }
 
-    public static Map<Integer, LinkedList<TreeNode>> levelLinkedList(TreeNode root) {
+    public static Map<Integer, LinkedList<TreeNode>> findLevelLinkList(TreeNode root) {
         Map<Integer, LinkedList<TreeNode>> map = new HashMap<Integer, LinkedList<TreeNode>>();
-        levelLinkedList_internal(root, 0, map);
+        findLevelLinkList_internal(root, 0, map);
         return map;
     }
 
     public static void main(String[] args) {
         int[] A = {0, 3, 5, 7, 8, 9, 11, 13, 15, 18, 21, 52, 101, 120, 123, 156, 189, 191};
         TreeNode root = Question03.reconstruct_inorder(A, 0, A.length - 1);
-        Map<Integer, LinkedList<TreeNode>> map = levelLinkedList(root);
+        Map<Integer, LinkedList<TreeNode>> map = findLevelLinkList(root);
         int count = 0;
         for(int key : map.keySet()) {
             String str = key + ": ";
