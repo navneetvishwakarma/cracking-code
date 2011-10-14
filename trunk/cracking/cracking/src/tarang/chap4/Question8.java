@@ -38,8 +38,8 @@ public class Question8 {
             path.add(node);
             map.get(nodesum).add(path);
         }
-        traverseNodePath(node.getLeft(), nodesum, copy(path), map);
-        traverseNodePath(node.getRight(), nodesum, copy(path), map);
+        traverseNodePath(node.getLeft(), nodesum, (LinkedList<TreeNode>) path.clone(), map);
+        traverseNodePath(node.getRight(), nodesum, (LinkedList<TreeNode>) path.clone(), map);
     }
 
     private static void traverse(TreeNode node, Map<Integer, List<LinkedList<TreeNode>>> map) {
@@ -49,14 +49,6 @@ public class Question8 {
         traverseNodePath(node, 0, new LinkedList<TreeNode>(), map);
         traverse(node.getLeft(), map);
         traverse(node.getRight(), map);
-    }
-
-    private static LinkedList<TreeNode> copy(LinkedList<TreeNode> path) {
-        LinkedList<TreeNode> mypath = new LinkedList<TreeNode>();
-        for (TreeNode pathnode : path) {
-            mypath.add(pathnode);
-        }
-        return mypath;
     }
 
 
