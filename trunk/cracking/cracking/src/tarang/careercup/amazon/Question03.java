@@ -15,9 +15,13 @@ public class Question03 {
             int mid = (int) Math.ceil((start + end) / 2.0);
             TreeNode node = new TreeNode(A[start]);
             TreeNode leftNode = reconstruct_preorder(A, start + 1, mid);
-            leftNode.setParent(node);
+            if (leftNode != null) {
+                leftNode.setParent(node);
+            }
             TreeNode rightNode = reconstruct_preorder(A, mid + 1, end);
-            rightNode.setParent(rightNode);
+            if (rightNode != null) {
+                rightNode.setParent(node);
+            }
             node.setLeft(leftNode);
             node.setRight(rightNode);
             return node;
@@ -31,9 +35,13 @@ public class Question03 {
             int mid = (int) Math.ceil((start + end)/2.0);
             TreeNode node = new TreeNode(A[mid]);
             TreeNode leftNode = reconstruct_inorder(A, start, mid - 1);
-            leftNode.setParent(node);
+            if(leftNode != null) {
+                leftNode.setParent(node);
+            }
             TreeNode rightNode = reconstruct_inorder(A, mid + 1, end);
-            rightNode.setParent(node);
+            if (rightNode != null) {
+                rightNode.setParent(node);
+            }
             node.setLeft(leftNode);
             node.setRight(rightNode);
             return node;
@@ -47,9 +55,13 @@ public class Question03 {
             int mid = (int) Math.ceil((start + end) / 2.0);
             TreeNode node = new TreeNode(A[end]);
             TreeNode leftNode = reconstruct_postorder(A, start, mid - 1);
-            leftNode.setParent(node);
+            if (leftNode != null) {
+                leftNode.setParent(node);
+            }
             TreeNode rightNode = reconstruct_postorder(A, mid, end - 1);
-            rightNode.setParent(node);
+            if (rightNode != null) {
+                rightNode.setParent(node);
+            }
             node.setLeft(leftNode);
             node.setRight(rightNode);
             return node;
