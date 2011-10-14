@@ -38,7 +38,7 @@ public class Question1 {
         }
     }
 
-    // find the min depth and max depth
+    // find the min depth and max depth 0(n)
     public static boolean isBalanced(TreeNode root) {
         int max = maxDepth(root);
         int min = minDepth(root);
