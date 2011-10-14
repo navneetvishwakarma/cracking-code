@@ -30,6 +30,9 @@ public class Question2 {
         while (!queue.isEmpty()) {
             node = queue.remove();
             for (GNode adj : node.getAdj()) {
+                if(adj == null) {   // adjacent could be null
+                    continue;
+                }
                 if(adj.equals(dest)) {
                     return true;
                 }
