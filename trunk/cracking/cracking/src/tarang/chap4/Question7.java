@@ -11,7 +11,7 @@ import tarang.datastructures.TreeNode;
  */
 public class Question7 {
 
-    // go through t1 and t2
+    // go through t1 and t2 - O(n)
     public static boolean isSubtree(TreeNode t1, TreeNode t2) {
         if(t1 == null && t2 != null) {
             // t1 has made it all the way to the leaf and not found a match for t2
