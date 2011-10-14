@@ -21,7 +21,7 @@ public class Question6 {
         return contains(tree.getLeft(), node) || contains(tree.getRight(), node);
     }
 
-    public static TreeNode commonAncestors(TreeNode tree, TreeNode node1, TreeNode node2) {
+    public static TreeNode commonAncestor(TreeNode tree, TreeNode node1, TreeNode node2) {
         if(tree == null) {
             return null;
         }
@@ -29,10 +29,10 @@ public class Question6 {
         boolean right = contains(tree.getRight(), node1) && contains(tree.getRight(), node2);
         if(left)  {
             // both nodes are in left subtree
-            return commonAncestors(tree.getLeft(), node1, node2);
+            return commonAncestor(tree.getLeft(), node1, node2);
         } else if(right) {
             // both nodes are in right subtree
-            return commonAncestors(tree.getRight(), node1, node2);
+            return commonAncestor(tree.getRight(), node1, node2);
         } else {
             // the nodes are both neither in left or right, so one no each side
             return tree;
@@ -66,10 +66,10 @@ public class Question6 {
 
         one.setRight(eleven);
 
-        System.out.println("node1: " + six.getValue() + " node2: " + fourteen.getValue() + " common:" + commonAncestors(eight, six, fourteen));
-        System.out.println("node1: " + four.getValue() + " node2: " + seven.getValue() + " common:" + commonAncestors(eight, four, seven));
-        System.out.println("node1: " + six.getValue() + " node2: " + seven.getValue() + " common:" + commonAncestors(eight, six, seven));
-        System.out.println("node1: " + seven.getValue() + " node2: " + eleven.getValue() + " common:" + commonAncestors(eight, eleven, seven));
+        System.out.println("node1: " + six.getValue() + " node2: " + fourteen.getValue() + " common:" + commonAncestor(eight, six, fourteen));
+        System.out.println("node1: " + four.getValue() + " node2: " + seven.getValue() + " common:" + commonAncestor(eight, four, seven));
+        System.out.println("node1: " + six.getValue() + " node2: " + seven.getValue() + " common:" + commonAncestor(eight, six, seven));
+        System.out.println("node1: " + seven.getValue() + " node2: " + eleven.getValue() + " common:" + commonAncestor(eight, eleven, seven));
     }
 
 }
