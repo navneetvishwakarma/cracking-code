@@ -9,7 +9,9 @@
  */
 
 
-package mm;
+package mm.chap2;
+
+import mm.Node;
 
 
 /**
