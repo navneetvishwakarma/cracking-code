@@ -22,6 +22,7 @@ import mm.Vertex;
  * @author mmathuria
  */
 public class Question4dot2 {
+    private StringBuilder path = new StringBuilder();
     
     public boolean hasPath(Graph g, Vertex start, Vertex end){
         
@@ -29,11 +30,13 @@ public class Question4dot2 {
         
         Vertex[] neighbors = g.getNeighbors(start);
         if(isNeighbor(neighbors, end)){
+            path.insert(0,end.getData());
             return true;
         }
         
         for(Vertex neighbor : neighbors){
             if((!neighbor.isVisited()) && hasPath(g, neighbor, end)){
+                path.insert(0,neighbor.getData() + "-->");
                 return true;
             }
         }
@@ -47,4 +50,9 @@ public class Question4dot2 {
         return false;
     }
 
+    public String pathAndClear(){
+        String s =  path.toString();
+        path.delete(0, path.length());
+        return s;
+    }    
 }
