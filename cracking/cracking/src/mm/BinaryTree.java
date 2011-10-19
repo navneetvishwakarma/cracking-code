@@ -9,6 +9,9 @@ package mm;
 public class BinaryTree {
     TreeNode root;
 
+    public BinaryTree() {
+    }
+
     public BinaryTree(int rootData) {
         root = new TreeNode(rootData);
     }
