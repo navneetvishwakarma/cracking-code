@@ -12,7 +12,11 @@ public class BinaryTree {
     public BinaryTree(int rootData) {
         root = new TreeNode(rootData);
     }
-    
+
+    public TreeNode getRoot() {
+        return root;
+    }
+
     public void insert(int data){
         TreeNode newNode = new TreeNode(data);
         
