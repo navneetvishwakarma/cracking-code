@@ -40,6 +40,10 @@ public class Graph {
         adjMat[end][start] = 1;
     }
     
+    public void addDirectedEdge(int start, int end){
+        adjMat[start][end] = 1;
+    }
+    
     //recursive dfs
     public void dfs(){
         ((Vertex)vertices[0]).setVisited(true);
