@@ -43,4 +43,15 @@ public class LinkedList {
     public Node tail(){
         return tail;
     }
+    
+    @Override
+    public String toString(){
+        StringBuilder sbuf = new StringBuilder();
+        Node current = head;
+        while(current != null){
+            sbuf.append(current.getiData()).append("-->");
+            current = current.next;
+        }
+        return sbuf.toString();
+    }
 }
