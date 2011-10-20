@@ -22,4 +22,8 @@ public class TreeNode {
     public TreeNode getRightChild() {
         return rightChild;
     }
+
+    public int getData() {
+        return data;
+    }
 }
