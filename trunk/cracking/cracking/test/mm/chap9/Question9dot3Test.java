@@ -1,13 +1,3 @@
-/*
- * $Id$
- *
- * Copyright (c) 2001-2008 Bridge Entertainment, Inc. (dba E-Poll Market Research)
- * All Rights Reserved.
- * 
- * This software is the confidential and proprietary information
- * of Bridge Entertainment, Inc. ("Confidential Information").
- */
-
 
 package mm.chap9;
 
@@ -37,6 +27,5 @@ public class Question9dot3Test extends TestCase {
         index = obj.findIndex(a, 16);
         assertEquals("returned index is wrong",-1,index);
         System.out.println("index=" + index);
-
     }
 }
