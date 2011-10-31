@@ -9,7 +9,7 @@ package mm.chap9;
  *
  * @author mmathuria
  */
-public class Question9dot4 {
+public class Question9dot5 {
     
     public int findIndex(String[] input, String key){
         return binarySearch(input,0,input.length-1,key);

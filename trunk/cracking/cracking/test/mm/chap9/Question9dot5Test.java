@@ -9,10 +9,10 @@ import junit.framework.TestCase;
  *
  * @author mmathuria
  */
-public class Question9dot4Test extends TestCase {
+public class Question9dot5Test extends TestCase {
     
     public void test1(){
-        Question9dot4 obj = new Question9dot4();
+        Question9dot5 obj = new Question9dot5();
         
         String[] input = {"at","","","","ball","","","car","","","dad","",""};
 
