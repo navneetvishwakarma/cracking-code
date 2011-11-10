@@ -151,3 +151,13 @@ Since second solution has only 2 jumps it is the optimum result.
 40) Find the ith largest element in an array in O(n)
 
 41) Convert an array {a1 a2 a3 ... an b1 b2 b3 ... bn c1 c2 c3 ... cn} to {a1 b1 c1 a2 b2 c2 ... an bn cn} without using any external storage. In other words, do it in place.
+
+42) Given a value N, generate all possible valid combinations of parentheses. Example N=2, valid output: ()(), (())
+
+43) You are given two strings, delete the letters of second string from first string and print the resultant string Example Input: Hello, Hai Output: ello
+
+44) Given an array of stock prices from day 0 to N-1 of a company X, we have to find the max loss that is possible. Loss occurs if stock is bought at higher price and sold at lower price.
+Example: 1 2 3 7 5 8 9 4 6 10 12
+Max Loss is 9 - 4 = 5 (Possible losses are 8-4 = 4, 7-5 = 2 etc).
+Max difference between stock price is 12 - 1 = 11 but max loss is 9 -4 = 5
+
