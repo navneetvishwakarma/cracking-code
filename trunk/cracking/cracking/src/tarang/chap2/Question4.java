@@ -39,14 +39,14 @@ public class Question4 {
             while(list2Node != null) {
                 value = list2Node.getValue() + carry;
                 result.add(value);
-                carry = value > 9 ? 1 : 0;
+                carry = 0;
                 list2Node = list2Node.getNext();
             }
         } else {
             while (list1Node != null) {
                 value = list1Node.getValue() + carry;
                 result.add(value);
-                carry = value > 9 ? 1 : 0;
+                carry = 0;
                 list1Node = list1Node.getNext();
             }
         }
@@ -58,7 +58,7 @@ public class Question4 {
 
     public static void main(String[] args) {
         LinkedList list1 = new LinkedList();
-        list1.add(6);
+        list1.add(5);
         list1.add(1);
         list1.add(3);
         LinkedList list2 = new LinkedList();
@@ -81,7 +81,7 @@ public class Question4 {
         list1.add(3);
         list1.add(3);
         list2 = new LinkedList();
-        list2.add(2);
+        list2.add(9);
         list2.add(9);
 
         result = Question4.add(list1, list2);
