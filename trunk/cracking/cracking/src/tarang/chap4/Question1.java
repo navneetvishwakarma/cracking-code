@@ -12,36 +12,24 @@ import tarang.datastructures.TreeNode;
  */
 public class Question1 {
 
-    public static int minDepth(TreeNode node) {
+    public static int minDepth(TreeNode node, int depth) {
         if (node == null) {
-            return 0;
+            return depth;
         }
-        int leftdepth = minDepth(node.getLeft());
-        int rightdepth = minDepth(node.getRight());
-        if (leftdepth < rightdepth) {
-            return leftdepth + 1;
-        } else {
-            return rightdepth + 1;
-        }
+        return Math.min(minDepth(node.getRight(), depth + 1), minDepth(node.getLeft(), depth + 1));
     }
 
-    public static int maxDepth(TreeNode node) {
-        if(node == null) {
-            return 0;
+    public static int maxDepth(TreeNode node, int depth) {
+        if (node == null) {
+            return depth;
         }
-        int leftdepth = maxDepth(node.getLeft());
-        int rightdepth = maxDepth(node.getRight());
-        if(leftdepth > rightdepth) {
-            return leftdepth + 1;
-        } else {
-            return rightdepth + 1;
-        }
+        return Math.max(maxDepth(node.getRight(), depth + 1), maxDepth(node.getLeft(), depth + 1));
     }
 
     // find the min depth and max depth 0(n)
     public static boolean isBalanced(TreeNode root) {
-        int max = maxDepth(root);
-        int min = minDepth(root);
+        int max = maxDepth(root, 0);
+        int min = minDepth(root, 0);
         System.out.println("min: " + min + " max: " + max);
         return max - min <= 1;
     }
