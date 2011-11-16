@@ -14,7 +14,6 @@ import java.util.*;
  */
 public class Question8 {
 
-
     private static void initializeMap(TreeNode node, Map<Integer, List<LinkedList<TreeNode>>> map) {
         if(node == null) {
             return;

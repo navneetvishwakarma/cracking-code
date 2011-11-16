@@ -14,13 +14,36 @@ import java.util.Map;
  */
 public class Question06 {
 
+    // number of nodes at each level - O(n)
+
+    public static Map<Integer, Integer> levelNodeCount(TreeNode root) {
+        Map<Integer, Integer> levelNodes = new HashMap<Integer, Integer>();
+        levelNodeCount(root, 0, levelNodes);
+        return levelNodes;
+    }
+
     private static void levelNodeCount(TreeNode node, int level, Map<Integer, Integer> levelNodes) {
         if(node == null) {
             return;
         }
-        levelNodes.put(level, levelNodes.get(level) == null ? 1 : levelNodes.get(level) + 1);
+        // update count at this level
+        Integer count = levelNodes.get(level);
+        if(count == null) {
+            count = 0;
+        }
+        count++;
+
+        levelNodes.put(level, count);
         levelNodeCount(node.getLeft(), level + 1, levelNodes);
         levelNodeCount(node.getRight(), level + 1, levelNodes);
+    }
+
+    // count number of nodes under each node + 1 - O(n)
+
+    public static Map<Integer, Integer> countNodes(TreeNode root) {
+        Map<Integer, Integer> nodeCount = new HashMap<Integer, Integer>();
+        countNodes(root, nodeCount);
+        return nodeCount;
     }
 
     private static int countNodes(TreeNode node, Map<Integer, Integer> nodeCount) {
@@ -30,20 +53,6 @@ public class Question06 {
         int currNodeCnt  = 1 + countNodes(node.getLeft(), nodeCount) + countNodes(node.getRight(), nodeCount);
         nodeCount.put(node.getValue(), currNodeCnt);
         return currNodeCnt;
-    }
-
-    // count number of nodes under each node + 1 - O(n)
-    public static Map<Integer, Integer> countNodes(TreeNode root) {
-        Map<Integer, Integer> nodeCount = new HashMap<Integer, Integer>();
-        countNodes(root, nodeCount);
-        return nodeCount;
-    }
-
-    // number of nodes at each level - O(n)
-    public static Map<Integer, Integer> levelNodeCount(TreeNode root) {
-        Map<Integer, Integer> levelNodes = new HashMap<Integer, Integer>();
-        levelNodeCount(root, 0, levelNodes);
-        return levelNodes;
     }
 
     public static void main(String[] args) {
