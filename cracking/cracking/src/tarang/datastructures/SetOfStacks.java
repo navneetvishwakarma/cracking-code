@@ -30,8 +30,8 @@ public class SetOfStacks {
             // new stack
             SetOfStacksNode node = new SetOfStacksNode();
             node.setPrev(top);
-            stacks.put(++numOfStacks, node);
             top = node;
+            stacks.put(++numOfStacks, top); // new top for this stack number
             currStack = node.getStack();
         }
         currStack.push(value);
