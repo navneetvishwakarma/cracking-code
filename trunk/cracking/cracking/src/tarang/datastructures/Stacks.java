@@ -16,10 +16,11 @@ public class Stacks {
         for(int i = 0; i < tops.length; i++) {
             tops[i] = -1;
         }
-        arr = new StacksNode[numOfStacks * 5];
+        int numOfNodes = numOfStacks * 5;
+        arr = new StacksNode[numOfNodes];
         // create the freelist
         freelist = new LinkedList();
-        for(int i = numOfStacks * 5 - 1; i >= 0; i--) {
+        for(int i = numOfNodes - 1; i >= 0; i--) {
             freelist.add(i);
         }
     }
