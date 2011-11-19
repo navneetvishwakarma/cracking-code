@@ -118,4 +118,30 @@ public class BinaryTree {
         System.out.println(" " + current.data);
         recursiveDisplay(current.rightChild);
     }
+    
+    
+    public static BinaryTree createFromInorder(int[] preOrderedArray){
+        int middle = (preOrderedArray.length - 1) / 2;
+        BinaryTree bTree = new BinaryTree(preOrderedArray[middle]);
+        _createFromInorder(0,middle-1,preOrderedArray, bTree.getRoot());
+        _createFromInorder(middle+1,preOrderedArray.length-1,preOrderedArray, bTree.getRoot());
+        return bTree;
+    }
+    
+    private static void _createFromInorder(int lower, int upper, int[] preOrderedArray, TreeNode current){
+        if(lower > upper)   return;
+        
+        int middle = (lower + upper) / 2;
+        int middleValue = preOrderedArray[middle];
+        TreeNode treeNode = new TreeNode(middleValue);
+        
+        if(middleValue < current.getData()){
+            current.leftChild = treeNode;
+        }else{
+            current.rightChild = treeNode;
+        }
+        
+        _createFromInorder(lower,middle-1,preOrderedArray,treeNode);
+        _createFromInorder(middle+1,upper,preOrderedArray,treeNode);
+    }
 }
