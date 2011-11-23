@@ -70,13 +70,6 @@ public class BinaryTreeTest extends TestCase {
         assertEquals("root was not deleted", nodeToBeDeleted.data, deletedNode.data);
     }
     
-    
-    public void testCreateFromInorder(){
-        int[] a = {5,15,20,25,30,35};
-        BinaryTree bTree = BinaryTree.createFromInorder(a);
-        bTree.display();
-    }
-
     private BinaryTree someTree() {
         BinaryTree bTree = new BinaryTree(100);
         bTree.insert(88);
