@@ -44,7 +44,7 @@ public class Question09 {
     }
 
     public static void main(String[] args) {
-        List<Integer> result = Question09.intersection(new int[]{8, 15, 23, 32, 44, 91, 3}, new int[]{18, 2, 32, 32, 44, 91, 18});
+        List<Integer> result = Question09.intersection(new int[]{8, 15, 23, 32, 44, 91, 3}, new int[]{18, 3, 32, 32, 44, 18, 91});
         for(int a : result) {
             System.out.print(a + " ");
         }
