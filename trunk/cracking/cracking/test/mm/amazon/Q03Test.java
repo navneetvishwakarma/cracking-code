@@ -30,7 +30,7 @@ public class Q03Test extends TestCase {
     public void testCreateFromPreorder() {
         int[] a = {25,15,5,20,35,30,45};
         int[] A = {3, 6, 0, 2, 3, 1, 4, 0, 4, 5, 9, 0, 1, 11, 10};
-        BinaryTree bTree = Q03.createFromPreorder(A);
+        BinaryTree bTree = Q03.createFromPreorder(a);
         bTree.display();
     }
 
