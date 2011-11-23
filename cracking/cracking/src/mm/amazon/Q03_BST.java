@@ -9,7 +9,7 @@ import mm.TreeNode;
  *
  * @author mmathuria
  */
-public class Q03 {
+public class Q03_BST {
     public static BinaryTree createFromInorder(int[] preOrderedArray) {
         int middle = (preOrderedArray.length - 1) / 2;
         BinaryTree bTree = new BinaryTree(preOrderedArray[middle]);
@@ -70,6 +70,30 @@ public class Q03 {
         
         _createFromPreOrder(lower+1, middle, current, data);
         _createFromPreOrder(middle+1, upper,current, data);
+    }
+    
+    
+    
+    public static BinaryTree cpo(int[] data){
+        BinaryTree bTree = new BinaryTree();
+        TreeNode root = _cpo(0,data.length-1,data);
+        bTree.setRoot(root);
+        return bTree;
+    }
+    
+    
+    public static TreeNode _cpo(int lower, int upper, int[] data){
+        if(lower > upper){
+            return null;
+        }
+        
+        TreeNode node = new TreeNode(data[lower]);
+        int middle = (lower + upper) / 2;
+        TreeNode leftChild = _cpo(lower+1, middle,data);
+        TreeNode rightChild = _cpo(middle+1,upper,data);
+        node.leftChild = leftChild;
+        node.rightChild = rightChild;
+        return node;
     }
 
     public static BinaryTree createFromPostorder(int[] data) {

@@ -103,7 +103,7 @@ public class BinaryTree {
     }
     
     
-    public void display(){
+    public void displayInorder(){
         if(root == null){
             System.out.println("empty tree");
             return;

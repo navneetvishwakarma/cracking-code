@@ -16,7 +16,7 @@ public class BinaryTreeTest extends TestCase {
         bTree.insert(87);
         bTree.insert(89);
 
-        bTree.display();
+        bTree.displayInorder();
     }
 
 

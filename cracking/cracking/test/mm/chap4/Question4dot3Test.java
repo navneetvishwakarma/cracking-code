@@ -27,11 +27,11 @@ public class Question4dot3Test extends TestCase {
         
         int[] data = {0, 3, 5, 7, 8, 9, 11, 21, 29};
         BinaryTree tree= obj.createBinaryTree(data);
-        tree.display();
+        tree.displayInorder();
 
         //empty tree
         data = new int[0];
         tree = obj.createBinaryTree(data);
-        tree.display();
+        tree.displayInorder();
     }
 }
