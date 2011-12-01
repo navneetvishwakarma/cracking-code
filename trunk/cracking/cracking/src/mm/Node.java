@@ -21,6 +21,7 @@ public class Node {
     public char data;
     public int iData;
     public Node next;
+    public Node prev;
 
     public Node(char data) {
         this.data = data;
