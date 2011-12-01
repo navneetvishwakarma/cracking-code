@@ -18,7 +18,7 @@ package mm;
  * @author mmathuria
  */
 public class LinkedList {
-    private Node head;
+    public Node head;
     private Node tail;
 
     public LinkedList() {
@@ -33,6 +33,19 @@ public class LinkedList {
         }
         
         tail.next = n;
+        tail = n; 
+    }
+    
+    public void appendDLL(Node n){
+        if(n == null)  return;
+        
+        if(head == null){
+            head = tail = n;
+            return;
+        }
+        
+        tail.next = n;
+        n.prev = tail;
         tail = n; 
     }
     
