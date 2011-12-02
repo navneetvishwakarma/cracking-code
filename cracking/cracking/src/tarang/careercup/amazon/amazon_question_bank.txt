@@ -185,3 +185,25 @@ We have write our split method with period as delimeter and we have to handle al
 
 47)
 Given a binary Search tree and a Node, How would you transform the tree to make that Node as root.The resulting tree should be a BST.
+
+48)
+How do you find a shortest connection between two persons on Facebook(if it exists)?
+You are provided with an API which returns the list of friends of a particular persons
+
+49)
+Find any substring of length 3 which is present in the reverse order from the string.
+Example: Input : abcdcba Output abc, cba : cdc, cdc
+
+50)
+Given a Binary tree where nodes may have positive or negative value, store the sum of the left and right subtree in the nodes.
+Eg-
+        10
+   -2        6
+8    -4    7    5
+Output:
+          20(-2+6+4+12)
+   4(8-4)    12(7+5)
+ 0    0    0    0
+
+
+
