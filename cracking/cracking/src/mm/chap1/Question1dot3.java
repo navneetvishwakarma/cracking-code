@@ -1,4 +1,4 @@
-package mm;
+package mm.chap1;
 
 import java.util.Arrays;
 
@@ -8,7 +8,7 @@ import java.util.Arrays;
  *
  * @author mmathuria
  */
-public class Singles {
+public class Question1dot3 {
 
     /**
      * Removes duplicate characters from input string.
