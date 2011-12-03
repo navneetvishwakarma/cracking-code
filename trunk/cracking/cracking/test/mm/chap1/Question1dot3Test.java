@@ -1,6 +1,7 @@
-package mm;
+package mm.chap1;
 
 import junit.framework.TestCase;
+import mm.chap1.Question1dot3;
 
 
 /**
@@ -8,11 +9,11 @@ import junit.framework.TestCase;
  *
  * @author mmathuria
  */
-public class SinglesTest extends TestCase {
+public class Question1dot3Test extends TestCase {
     
     
     public void testRemoveDup(){
-        Singles singles = new Singles();
+        Question1dot3 singles = new Question1dot3();
 
         String[] inputs = {"madam", "abcabc", "aa", "abc", "ab","aabbcc"};
         String[] expecteds = {"adm", "abc", "a", "abc", "ab","abc"};
@@ -26,7 +27,7 @@ public class SinglesTest extends TestCase {
     
     
     public void testRemoveDupsNoSort(){
-        Singles singles = new Singles();
+        Question1dot3 singles = new Question1dot3();
         String[] inputs = {"madam", "abcabc","aa","abc","ab","aabbcc"};
         String[] expecteds = {"mad","abc","a","abc","ab","abc"};
         
