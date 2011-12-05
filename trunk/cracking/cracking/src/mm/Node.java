@@ -42,4 +42,22 @@ public class Node {
     public int getiData() {
         return iData;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 31 * hash + iData;
+        hash = 31 * hash + data;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == this) return true;
+        
+        if(!(obj instanceof Node)) return false;
+        
+        Node n = (Node)obj;
+        return (this.data == n.data && this.iData == n.iData);
+    }
 }

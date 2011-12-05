@@ -56,6 +56,16 @@ public class LinkedList {
     public Node tail(){
         return tail;
     }
+
+    public int count(){
+        int count = 0;
+        Node c = head;
+        while(c != null){
+            c = c.next();
+            count++;
+        }
+        return count;
+    }
     
     @Override
     public String toString(){
