@@ -24,16 +24,17 @@ public class LinkedList {
     public LinkedList() {
     }
     
-    public void append(Node n){
-        if(n == null)  return;
+    public LinkedList append(Node n){
+        if(n == null)  return this;
         
         if(head == null){
             head = tail = n;
-            return;
+            return this;
         }
         
         tail.next = n;
         tail = n; 
+        return this;
     }
     
     public void appendDLL(Node n){
