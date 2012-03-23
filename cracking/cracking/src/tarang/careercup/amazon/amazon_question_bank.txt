@@ -212,4 +212,24 @@ Given a binary tree print the largest part of binary tree that satisfies the pro
 Given an integer find the next (smallest number greater than given number) integer which is palindrome
 Example: Input: 111 Output: 121, Input: 301 Output: 313
 
+53)
+Write an algorithm to find F(n) the number of bits set to 1, in all numbers from 1 to n for any given value of n.
+
+ For example:
+
+ 1: 001
+ 2: 010
+ 3: 011
+ 4: 100
+ 5: 101
+ 6: 110
+ So
+
+ F(1) = 1,
+ F(2) = F(1) + 1 = 2,
+ F(3) = F(2) + 2 = 4,
+ F(4) = F(3) + 1 = 5,
+ etc.
+
+54) Find the maximum subarray in an array with negative numbers
 
