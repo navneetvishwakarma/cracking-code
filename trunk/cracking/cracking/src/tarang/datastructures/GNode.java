@@ -44,7 +44,7 @@ public class GNode {
         this.discovered = discovered;
     }
 
-    public void connnect(GNode node) {
+    public void connect(GNode node) {
         this.adj.add(node);
     }
 

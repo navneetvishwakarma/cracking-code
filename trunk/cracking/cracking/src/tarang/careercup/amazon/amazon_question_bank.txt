@@ -205,5 +205,11 @@ Output:
    4(8-4)    12(7+5)
  0    0    0    0
 
+51)
+Given a binary tree print the largest part of binary tree that satisfies the property of BST.
+
+52)
+Given an integer find the next (smallest number greater than given number) integer which is palindrome
+Example: Input: 111 Output: 121, Input: 301 Output: 313
 
 
