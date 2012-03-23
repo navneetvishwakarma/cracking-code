@@ -35,7 +35,7 @@ public class Graph {
                     nodes.put(key2, node2);
                 }
                 if(adj_matrix[i][j] == 1) {
-                    node1.connnect(node2);
+                    node1.connect(node2);
                 }
             }
         }
