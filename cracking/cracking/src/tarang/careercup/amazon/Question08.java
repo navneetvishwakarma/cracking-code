@@ -15,7 +15,7 @@ public class Question08 {
             return;
         }
         int digit = number % 10;
-        number /= 10;
+        number = (number - digit) / 10;
         print(number);
         System.out.print(digit + " ");
     }

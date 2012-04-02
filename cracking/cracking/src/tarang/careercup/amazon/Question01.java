@@ -16,10 +16,10 @@ public class Question01 {
             return true;
         } else {
             int value = node.getValue();
-            if (node.getLeft() != null && value < node.getLeft().getValue()) {
+            if(node.getLeft() != null && value < node.getLeft().getValue()) {
                 return false;
             }
-            if (node.getRight() != null && value > node.getRight().getValue()) {
+            if(node.getRight() != null && value > node.getRight().getValue()) {
                 return false;
             }
             return check(node.getLeft()) && check(node.getRight());

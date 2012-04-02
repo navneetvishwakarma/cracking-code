@@ -17,13 +17,13 @@ public class Question03 {
             TreeNode leftNode = reconstruct_preorder(A, start + 1, mid);
             if (leftNode != null) {
                 leftNode.setParent(node);
+                node.setLeft(leftNode);
             }
             TreeNode rightNode = reconstruct_preorder(A, mid + 1, end);
             if (rightNode != null) {
                 rightNode.setParent(node);
+                node.setRight(rightNode);
             }
-            node.setLeft(leftNode);
-            node.setRight(rightNode);
             return node;
         } else {
             return null;
