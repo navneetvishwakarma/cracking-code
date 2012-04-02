@@ -20,7 +20,7 @@
 
 11) You have an infinite set of coordinates, find out the 10 points closest to the origin
 
-12) Reverse a doubly linked list
+12) Reverse a linked list
 
 13) Given a binary tree and a number X, find if there exists a path that sums to X. Note that the path may or may not start from the root
 
