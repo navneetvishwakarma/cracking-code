@@ -11,26 +11,22 @@ public class Question10 {
     // O(n). where n = A.length + B.length
     public static int[] merge(int[] A, int[] B) {
         int[] C = new int[A.length + B.length];
-        int index1 = A.length - 1;
-        int index2 = B.length - 1;
-        int index3 = C.length - 1;
-        while(index1 >= 0 && index2 >= 0) {
-            if(A[index1] > B[index2]) {
-                C[index3] = A[index1];
-                index1--;
+        int index1 = 0, index2 = 0, index3 = 0;
+
+        while(index1 < A.length && index2 < B.length) {
+            if(A[index1] < B[index2]) {
+                C[index3++] = A[index1++];
             } else {
-                C[index3] = B[index2];
-                index2--;
+                C[index3++] = B[index2++];
             }
-            index3--;
         }
         // finish off A if any left
-        while (index1 >= 0) {
-            C[index3--] = A[index1--];
+        while (index1 < A.length) {
+            C[index3++] = A[index1++];
         }
         // finish off B if any left
-        while (index2 >= 0) {
-            C[index3--] = B[index1--];
+        while (index2 < B.length) {
+            C[index3++] = B[index2++];
         }
         return C;
     }
