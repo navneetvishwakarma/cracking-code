@@ -233,3 +233,5 @@ Write an algorithm to find F(n) the number of bits set to 1, in all numbers from
 
 54) Find the maximum subarray in an array with negative numbers
 
+55) Given an array find 3 elements such that a[i] < a[j] < a[k] and i < j < k in O(n) time.
+
