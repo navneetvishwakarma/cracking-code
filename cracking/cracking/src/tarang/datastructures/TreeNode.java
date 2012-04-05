@@ -12,6 +12,7 @@ public class TreeNode {
     private TreeNode left;
     private TreeNode right;
     private TreeNode pred;  // for "find path in the tree" question
+    private TreeNode succ;  // for "find path in the tree" question
 
     public TreeNode() {
     }
@@ -79,6 +80,14 @@ public class TreeNode {
 
     public void setPred(TreeNode pred) {
         this.pred = pred;
+    }
+
+    public TreeNode getSucc() {
+        return succ;
+    }
+
+    public void setSucc(TreeNode succ) {
+        this.succ = succ;
     }
 
     @Override
