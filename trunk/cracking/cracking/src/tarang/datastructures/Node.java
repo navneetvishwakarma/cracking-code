@@ -17,6 +17,20 @@ public class Node {
         this.value = value;
     }
 
+    public Node(int... value) {
+        Node prev = null;
+        for(int val : value) {
+            if(prev == null) {
+                this.value = val;
+                prev = this;
+            } else {
+                Node node = new Node(val);
+                prev.setNext(node);
+                prev = node;
+            }
+        }
+    }
+
     public Integer getValue() {
         return value;
     }
