@@ -17,15 +17,13 @@ public class Question07 {
         }
         int leftSum = maxSumPath(node.getLeft());
         int rightSum = maxSumPath(node.getRight());
-        int sum = node.getValue();
         if(leftSum > rightSum) {
             node.setPred(node.getLeft());
-            sum += leftSum;
+            return node.getValue() + leftSum;
         } else {
             node.setPred(node.getRight());
-            sum += rightSum;
+            return node.getValue() + rightSum;
         }
-        return sum;
     }
 
 
@@ -38,10 +36,10 @@ public class Question07 {
         int count = 0;
         while(curr != null) {
             count += curr.getValue();
-            System.out.print(curr + " -> ");
+            System.out.print(curr.getValue() + " -> ");
             curr = curr.getPred();
         }
-        System.out.println();
+        System.out.println(root);
         System.out.println("total: " + count);
     }
 }
