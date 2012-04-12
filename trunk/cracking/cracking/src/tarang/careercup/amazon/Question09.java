@@ -14,10 +14,11 @@ import java.util.Map;
  */
 public class Question09 {
 
-    // O(n) + O(m) solution. space complexity is O(n) or O(m), whichever is smaller.
+    // O(n + m) solution. space complexity is O(n) or O(m), whichever is smaller. Alternatively you can sort the two arrays
+    // in that case there will not be any space used but time will be bounded by the sorting algorithm
     public static List<Integer> intersection(int[] A, int[] B) {
         Map<Integer, Integer> oneset = new HashMap<Integer, Integer>();
-        int[] ref_copy1 = B;
+        int[] ref_copy1 = B;    // reference var to pick the smallest of the two arrays
         int[] ref_copy2 = A;
         if(A.length < B.length) {
             ref_copy1 = A;
@@ -37,7 +38,7 @@ public class Question09 {
             cnt = oneset.get(anInt);
             if(cnt != null && cnt > 0) {
                 intersect.add(anInt);
-                oneset.put(anInt, --cnt);
+                oneset.put(anInt, cnt - 1);
             }
         }
         return intersect;

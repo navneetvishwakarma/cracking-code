@@ -29,9 +29,23 @@ public class Question05 {
         return true;
     }
 
+    public static boolean isPalindromeRecursive(char[] chars, int start, int end) {
+        if(start > end) {
+            return true;
+        }
+        if(!Character.isLetterOrDigit(chars[start])) {
+            return isPalindromeRecursive(chars, ++start, end);
+        }
+        if(!Character.isLetterOrDigit(chars[end])) {
+            return isPalindromeRecursive(chars, start, --end);
+        }
+        return chars[start] == chars[end] && isPalindromeRecursive(chars, ++start, --end);
+    }
+
     public static void main(String[] args) {
         String str = "..AB ,, CD, ED. CB...A...";
         System.out.println(str + " -> " + isPalindrome(str.toCharArray()));
+        System.out.println(str + " -> " + isPalindromeRecursive(str.toCharArray(), 0, str.length()-1));
 
     }
 }

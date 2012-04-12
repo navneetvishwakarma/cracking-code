@@ -1,8 +1,6 @@
 package tarang.careercup.amazon;
 
 
-import com.sun.corba.se.spi.ior.iiop.MaxStreamFormatVersionComponent;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -25,8 +23,12 @@ public class Question11 {
 
     public List<Point> closestPoints(int N) {
         List<Point> points = new ArrayList<Point>();
-        while(pq.size() == 0 || points.size() < N) {
-            points.add(pq.poll());
+        while(pq.size() > 0 && points.size() <= N) {
+            if(pq.size() > N) {
+                pq.poll();
+            } else {
+                points.add(pq.poll());
+            }
         }
         return points;
     }
@@ -39,7 +41,7 @@ public class Question11 {
     }
 
     public static void main(String[] args) {
-        Question11 q11 = new Question11(100);
+        Question11 q11 = new Question11(5);
         for(int i = 0; i < 10; i++) {
             q11.addPoint(new Point());
         }
@@ -77,9 +79,9 @@ class Point implements Comparable {
         if(dist1 == dist2) {
             return 0;
         } else if(dist1 < dist2) {
-            return -1;
-        } else {
             return 1;
+        } else {
+            return -1;
         }
     }
 

@@ -2,7 +2,7 @@ package tarang.careercup.amazon;
 
 
 /**
- * Compose a sorted array from two already sorted arrays
+ * Compose a sorted array from two already sorted arrays. Merge two sorted arrays
  *
  * @author tdesai
  */

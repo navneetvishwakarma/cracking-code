@@ -31,9 +31,7 @@ public class Question06 {
         if(count == null) {
             count = 0;
         }
-        count++;
-
-        levelNodes.put(level, count);
+        levelNodes.put(level, count + 1);
         levelNodeCount(node.getLeft(), level + 1, levelNodes);
         levelNodeCount(node.getRight(), level + 1, levelNodes);
     }
@@ -47,10 +45,15 @@ public class Question06 {
     }
 
     private static int countNodes(TreeNode node, Map<Integer, Integer> nodeCount) {
-        if(node == null) {
-            return 0;
+        int currNodeCnt = 0;
+        if(node.getLeft() != null) {
+            currNodeCnt += 1;
+            currNodeCnt += countNodes(node.getLeft(), nodeCount);
         }
-        int currNodeCnt  = 1 + countNodes(node.getLeft(), nodeCount) + countNodes(node.getRight(), nodeCount);
+        if(node.getRight() != null) {
+            currNodeCnt += 1;
+            currNodeCnt += countNodes(node.getRight(), nodeCount);
+        }
         nodeCount.put(node.getValue(), currNodeCnt);
         return currNodeCnt;
     }
