@@ -6,8 +6,8 @@ import tarang.datastructures.TreeNode;
 import java.util.ArrayList;
 
 /**
- * Given a binary tree and a number X, find if there exists a path that sums to X. Note that the path may or may not
- * start from the root
+ * Given a binary tree and a number X, find if there exists a path that sums to X. Path starts from the root and
+ * goes to the leaf
  *
  * @author tdesai
  */
@@ -32,6 +32,7 @@ public class Question13 {
                 System.out.println();
             }
         }
+        // clone because left node and right now cannot have the same list because they might change each other's list
         ArrayList<Integer> c1 = (ArrayList<Integer>) path.clone();
         ArrayList<Integer> c2 = (ArrayList<Integer>) path.clone();
         findPathForX(node.getLeft(), X, level+1, c1);
