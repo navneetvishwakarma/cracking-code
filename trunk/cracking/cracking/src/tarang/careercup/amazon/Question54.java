@@ -15,6 +15,7 @@ public class Question54 {
         int left_idx = mid;
         int left_sum = 0;
         for(int i = mid; i >= low; i--) {
+            // go from middle to lower and find the highest sum and its index
             sum += nums[i];
             if(sum > left_sum) {
                 left_sum = sum;
@@ -22,10 +23,12 @@ public class Question54 {
             }
         }
 
+        // find max sum and indexes on the left half
         sum = 0;
         int right_idx = mid;
         int right_sum = 0;
         for(int i = mid+1; i <= high; i++) {
+            // go from mid+1 to high and find the highest sum and its index
             sum += nums[i];
             if(sum > right_sum) {
                 right_sum = sum;

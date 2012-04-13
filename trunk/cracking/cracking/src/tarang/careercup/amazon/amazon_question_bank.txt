@@ -22,7 +22,7 @@
 
 12) Reverse a linked list
 
-13) Given a binary tree and a number X, find if there exists a path that sums to X. Note that the path may or may not start from the root
+13) Given a binary tree and a number X, find if there exists a path that sums to X. Path starts from the root and goes to the leaf
 
 14) Given a binary search tree with each node's structure as follows:
 
