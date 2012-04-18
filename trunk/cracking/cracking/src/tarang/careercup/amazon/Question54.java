@@ -23,7 +23,7 @@ public class Question54 {
             }
         }
 
-        // find max sum and indexes on the left half
+        // find max sum and indexes on the right half
         sum = 0;
         int right_idx = mid;
         int right_sum = 0;

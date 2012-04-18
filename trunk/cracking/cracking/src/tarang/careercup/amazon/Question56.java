@@ -12,10 +12,7 @@ public class Question56 {
 
     public static boolean isSet1(int number, int pos) {
         int k = 1;
-
-        for(int i = 1; i <= pos; i++) {
-            k = k << 1;
-        }
+        k = k << pos;
         return (number & k) == k;
     }
 
@@ -32,11 +29,11 @@ public class Question56 {
     }
 
     public static void main(String[] args) {
-        /*System.out.println(isSet1(16, 2) + " " + Integer.toBinaryString(16));
-        System.out.println(isSet1(15, 2));
-        System.out.println(isSet1(14, 1));
-        System.out.println(isSet1(11, 3));
-*/
+        System.out.println(isSet1(16, 2) + " " + Integer.toBinaryString(16));
+        System.out.println(isSet1(15, 2) + " " + Integer.toBinaryString(15));
+        System.out.println(isSet1(14, 1) + " " + Integer.toBinaryString(14));
+        System.out.println(isSet1(11, 3) + " " + Integer.toBinaryString(11));
+
         float x = 16.15f;
         int int_x = (int) x;
         int dec_x = (int) ((x - int_x) * 10000);
