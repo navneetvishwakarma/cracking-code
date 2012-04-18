@@ -8,7 +8,7 @@ package tarang.careercup.amazon;
  *
  * @author tdesai
  */
-public class Question56 {
+public class Question17 {
 
     public static boolean isSet1(int number, int pos) {
         int k = 1;

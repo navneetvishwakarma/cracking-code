@@ -10,7 +10,7 @@ import tarang.datastructures.Node;
  *
  * @author tdesai
  */
-public class Question59 {
+public class Question20 {
 
     public static Node straightenOut(Node ll) {
         Node inc_tail = null;

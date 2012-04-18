@@ -24,7 +24,43 @@
 
 13) Given a binary tree and a number X, find if there exists a path that sums to X. Path starts from the root and goes to the leaf
 
-14) Given a binary search tree with each node's structure as follows:
+14)
+Write an algorithm to find F(n) the number of bits set to 1, in all numbers from 1 to n for any given value of n.
+
+ For example:
+
+ 1: 001
+ 2: 010
+ 3: 011
+ 4: 100
+ 5: 101
+ 6: 110
+ So
+
+ F(1) = 1,
+ F(2) = F(1) + 1 = 2,
+ F(3) = F(2) + 2 = 4,
+ F(4) = F(3) + 1 = 5,
+ etc.
+
+15) Find the maximum subarray in an array with negative numbers
+
+16) Given an array find 3 elements such that a[i] < a[j] < a[k] and i < j < k in O(n) time.
+
+17) Given a function, take a number and the bit position and return true if that bit is set to 1 and false otherwise.
+
+18) Given an unsorted Array find maximum value of A[j] - A[i] where j>i..in O(n) time
+
+19) Write a Program. You will create an employee class with the following properties:ID (int), FName(string), LName(string).
+ (Functionality) to track an employee's manager and subordinates.
+ Add a method that displays the names of all subordinates for a given employee.
+ Calculate the complexity. Do not use multiple classes.
+
+20) Input linkedlist : 1->9->3->8->5->7->7. Odd indexed are increasin and even indexed are descreasing.
+
+21) Return true if two trees are same
+
+**) Given a binary search tree with each node's structure as follows:
 
 struct Node
 {
@@ -35,40 +71,40 @@ Node successor;
 
 and all successor pointers set to NULL. Traverse the BST and set successor pointers for each node.
 
-15) Find the maximum contiguous sum in a circular linked list.
+**) Find the maximum contiguous sum in a circular linked list.
 
-16) Given a number find a bigger number with the same digits otherwise return -1. E.g. 5678 -> 8754, 8765 -> -1
+**) Given a number find a bigger number with the same digits otherwise return -1. E.g. 5678 -> 8754, 8765 -> -1
 
-17) Given an array of integers (can be both positive and negative), find 3 which multiply to give the largest product
+**) Given an array of integers (can be both positive and negative), find 3 which multiply to give the largest product
 
-18) Given an array of size N consisting of 3 distinct numbers, how would you sort them using swapping in O(n)?
+**) Given an array of size N consisting of 3 distinct numbers, how would you sort them using swapping in O(n)?
 
-19) Given pairs of employee-managers, construct an organizational tree of the company.
+**) Given pairs of employee-managers, construct an organizational tree of the company.
 E.g. e1:m1, e2:m1, e3:m1, e4:m2, e5:m2...
 
-20) Given an array, find out if there exist a subarray such that its sum is zero.
+**) Given an array, find out if there exist a subarray such that its sum is zero.
 
-21) Design a data structure that allows for two operations:
+**) Design a data structure that allows for two operations:
 add(i, x): add x to the ith element (sorted ith)
 sum(i): sum of the first i numbers
 
 Additional memory of O(n) is allows but the two operations should perform in O(log n)
 
-22) Write an algorithm to solve generalized "M liter and N liter jug problem" to check if K liter is possible from an M liter and N liter jug. E.g. M=3, N=4 and K=5. Its possible to measure 5 liter with the help of 3 and 4 liter jugs. Return true or false for parameters M, N and K.
+**) Write an algorithm to solve generalized "M liter and N liter jug problem" to check if K liter is possible from an M liter and N liter jug. E.g. M=3, N=4 and K=5. Its possible to measure 5 liter with the help of 3 and 4 liter jugs. Return true or false for parameters M, N and K.
 
-23) Give an algorithm for finding the shorted distance between two words in a text document.
+**) Give an algorithm for finding the shorted distance between two words in a text document.
 
-24) Given a set of intergers, find out if there exists a subset whose sum is equal to X.
+**) Given a set of intergers, find out if there exists a subset whose sum is equal to X.
 
-25) Given a binary tree, find minimum element at a given depth.
+**) Given a binary tree, find minimum element at a given depth.
 
-26) You have an array in which ever number is repeated odd number of times except one , you have to give that with O(n) time complexity
+**) You have an array in which ever number is repeated odd number of times except one , you have to give that with O(n) time complexity
 
-27) Given a modified BST where each node carries extra information of the total number of nodes below it. Find the Kth smallest number in O(logn) time.
+**) Given a modified BST where each node carries extra information of the total number of nodes below it. Find the Kth smallest number in O(logn) time.
 
-28) Given a set of strings, check whether it is possible to chain all of them. Two strings can be chained iff s1[n] == s2[0] || s2[0] == s1[n]
+**) Given a set of strings, check whether it is possible to chain all of them. Two strings can be chained iff s1[n] == s2[0] || s2[0] == s1[n]
 
-29) A zero-indexed array A consisting of N integers is given. A triplet (P, Q, R) is triangular if and
+**) A zero-indexed array A consisting of N integers is given. A triplet (P, Q, R) is triangular if and
 A[P] + A[Q] > A[R],
 A[Q] + A[R] > A[P],
 A[R] + A[P] > A[Q].
@@ -92,23 +128,23 @@ Expected worst-case time complexity: O(n log n)
 Expected worst-case space complexity: O(1)
 
 
-30) Given an array of integers, for each elemnt in the array find the closest greatest element to the right. Closest means the distance between two element's array indices must be minimum . Solution should be better then O(n log n) or better?
+**) Given an array of integers, for each elemnt in the array find the closest greatest element to the right. Closest means the distance between two element's array indices must be minimum . Solution should be better then O(n log n) or better?
 
-31) Given a number X, return the smallest possible list of numbers whose squares sum up X.
+**) Given a number X, return the smallest possible list of numbers whose squares sum up X.
 
-32) Code/Define an algorithm to find if a given string has balanced parentheses, where we have 3 types 1. ( ) 2. [ ] 3. { }. Example of Balanced - [{}](), Not balanced - ({)[}]
+**) Code/Define an algorithm to find if a given string has balanced parentheses, where we have 3 types 1. ( ) 2. [ ] 3. { }. Example of Balanced - [{}](), Not balanced - ({)[}]
 
-33) In an NxN matrix whose rows and columns are in sorted order. Implement
+**) In an NxN matrix whose rows and columns are in sorted order. Implement
 search(int[][] A, x) : returns (i,j) of matrix A where x is located otherwise return null
 median(int[][] A): return the median number
 
-34) Given an array which consists of elements in the following form :
+**) Given an array which consists of elements in the following form :
 All the adjacent elements differ only by value -1 or +1.
 You are given an element. You need to search for its index.
 
-35)  Given a n-ary tree. A random leaf node will be selected.Imagine that you are now holding the tree with your hand from that node. All other nodes will now fall under gravity. Write a function to perform this transformation.
+**)  Given a n-ary tree. A random leaf node will be selected.Imagine that you are now holding the tree with your hand from that node. All other nodes will now fall under gravity. Write a function to perform this transformation.
 
-36)
+**)
 
 Write a program to implement Boggle Game.
 You are given a 4x4 matrix of letters and a dictionary, find all the valid words in the matrix. Following are the conditions
@@ -133,9 +169,9 @@ Not valid words:
 DAGCD ( D cannot be used again)
 DOG ( There is no path between letters)
 
-37) Find height of a tree without using recursion
+**) Find height of a tree without using recursion
 
-38)
+**)
 
 Jump Game:
 Given an array start from the first element and reach the last by jumping. The jump length can be at most the value at the current position in the array. Optimum result is when u reach the goal in minimum number of jumps.
@@ -146,22 +182,22 @@ i) 0,2,3,4 (jump 2 to index 2, then jump 1 to index 3 then 1 to index 4)
 ii) 0,1,4 (jump 1 to index 1, then jump 3 to index 4)
 Since second solution has only 2 jumps it is the optimum result.
 
-39) Given an N-ary tree, find out if it is symmetric about the line drawn through the root node of the tree.
+**) Given an N-ary tree, find out if it is symmetric about the line drawn through the root node of the tree.
 
-40) Find the ith largest element in an array in O(n)
+**) Find the ith largest element in an array in O(n)
 
-41) Convert an array {a1 a2 a3 ... an b1 b2 b3 ... bn c1 c2 c3 ... cn} to {a1 b1 c1 a2 b2 c2 ... an bn cn} without using any external storage. In other words, do it in place.
+**) Convert an array {a1 a2 a3 ... an b1 b2 b3 ... bn c1 c2 c3 ... cn} to {a1 b1 c1 a2 b2 c2 ... an bn cn} without using any external storage. In other words, do it in place.
 
-42) Given a value N, generate all possible valid combinations of parentheses. Example N=2, valid output: ()(), (())
+**) Given a value N, generate all possible valid combinations of parentheses. Example N=2, valid output: ()(), (())
 
-43) You are given two strings, delete the letters of second string from first string and print the resultant string Example Input: Hello, Hai Output: ello
+**) You are given two strings, delete the letters of second string from first string and print the resultant string Example Input: Hello, Hai Output: ello
 
-44) Given an array of stock prices from day 0 to N-1 of a company X, we have to find the max loss that is possible. Loss occurs if stock is bought at higher price and sold at lower price.
+**) Given an array of stock prices from day 0 to N-1 of a company X, we have to find the max loss that is possible. Loss occurs if stock is bought at higher price and sold at lower price.
 Example: 1 2 3 7 5 8 9 4 6 10 12
 Max Loss is 9 - 4 = 5 (Possible losses are 8-4 = 4, 7-5 = 2 etc).
 Max difference between stock price is 12 - 1 = 11 but max loss is 9 -4 = 5
 
-45)
+**)
 
 a) You have a package repository in which there are dependencies between packages for building like package A has to be built before package B. If you are given dependencies between the packages and package name x, we have find the build order for x.
 Example:
@@ -177,24 +213,24 @@ Given a function Set<Package> getDependencies (Package packageName) which return
 
 b) How would you handle cyclic dependencies (Algo only)
 
-46)
+**)
 Given two version numbers as string (can be very long) write a function which returns 1 if first one is latest, -1 if second one is latest and 0 if they are equal.
 Example: 1.2.0.4.5
 1.2.1
 We have write our split method with period as delimeter and we have to handle all the malformed version numbers like 1..2.0 etc and similar other exceptions
 
-47)
+**)
 Given a binary Search tree and a Node, How would you transform the tree to make that Node as root.The resulting tree should be a BST.
 
-48)
+**)
 How do you find a shortest connection between two persons on Facebook(if it exists)?
 You are provided with an API which returns the list of friends of a particular persons
 
-49)
+**)
 Find any substring of length 3 which is present in the reverse order from the string.
 Example: Input : abcdcba Output abc, cba : cdc, cdc
 
-50)
+**)
 Given a Binary tree where nodes may have positive or negative value, store the sum of the left and right subtree in the nodes.
 Eg-
         10
@@ -205,36 +241,10 @@ Output:
    4(8-4)    12(7+5)
  0    0    0    0
 
-51)
+**)
 Given a binary tree print the largest part of binary tree that satisfies the property of BST.
 
-52)
+**)
 Given an integer find the next (smallest number greater than given number) integer which is palindrome
 Example: Input: 111 Output: 121, Input: 301 Output: 313
 
-53)
-Write an algorithm to find F(n) the number of bits set to 1, in all numbers from 1 to n for any given value of n.
-
- For example:
-
- 1: 001
- 2: 010
- 3: 011
- 4: 100
- 5: 101
- 6: 110
- So
-
- F(1) = 1,
- F(2) = F(1) + 1 = 2,
- F(3) = F(2) + 2 = 4,
- F(4) = F(3) + 1 = 5,
- etc.
-
-54) Find the maximum subarray in an array with negative numbers
-
-55) Given an array find 3 elements such that a[i] < a[j] < a[k] and i < j < k in O(n) time.
-
-56) Given a function, take a number and the bit position and return true if that bit is set to 1 and false otherwise.
-
-57) Given an unsorted Array find maximum value of A[j] - A[i] where j>i..in O(n) time

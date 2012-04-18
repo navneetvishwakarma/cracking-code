@@ -6,7 +6,7 @@ package tarang.careercup.amazon;
  *
  * @author tdesai
  */
-public class Question57 {
+public class Question18 {
 
     public static int maxDiff(int[] A) {
         int minSoFar = A[0];
