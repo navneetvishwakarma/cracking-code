@@ -60,6 +60,10 @@ Write an algorithm to find F(n) the number of bits set to 1, in all numbers from
 
 21) Return true if two trees are same
 
+22) print all palindromes of size k possible from given alphabet set.
+    eg alphabet set : {a,e,i,o,u}
+    print all palindromes of size say 10.
+
 **) Given a binary search tree with each node's structure as follows:
 
 struct Node
