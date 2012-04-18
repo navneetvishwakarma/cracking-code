@@ -6,7 +6,7 @@ package tarang.careercup.amazon;
  *
  * @author tdesai
  */
-public class Question54 {
+public class Question15 {
 
 
     private int[] maxCrosssingSubarray(int nums[], int low, int mid, int high) {
@@ -60,7 +60,7 @@ public class Question54 {
 
     public static void main(String[] args) {
         int[] nums = {13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7};
-        int[] maxsubarray = new Question54().maxSubarray(nums, 0, nums.length-1);
+        int[] maxsubarray = new Question15().maxSubarray(nums, 0, nums.length-1);
         for(int num : maxsubarray) {
             System.out.print(num + " ");
         }

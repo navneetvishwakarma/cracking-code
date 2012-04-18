@@ -6,7 +6,7 @@ package tarang.careercup.amazon;
  *
  * @author tdesai
  */
-public class Question55 {
+public class Question16 {
 
     public static void findMin3InOrder2(int[] A) {
         int[] left = new int[A.length];

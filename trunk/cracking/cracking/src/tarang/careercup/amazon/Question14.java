@@ -22,7 +22,7 @@ package tarang.careercup.amazon;
  *
  * @author tdesai
  */
-public class Question53 {
+public class Question14 {
 
     public int find1Count(int input) {
         input += 1;
@@ -41,6 +41,6 @@ public class Question53 {
     }
 
     public static void main(String[] args) {
-        System.out.print(new Question53().find1Count(12));
+        System.out.print(new Question14().find1Count(12));
     }
 }

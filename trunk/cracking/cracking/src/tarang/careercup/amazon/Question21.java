@@ -8,7 +8,7 @@ import tarang.datastructures.TreeNode;
  *
  * @author tdesai
  */
-public class Question60 {
+public class Question21 {
 
     public static boolean same(TreeNode node1, TreeNode node2) {
         if(node1 == null && node2 == null) {
