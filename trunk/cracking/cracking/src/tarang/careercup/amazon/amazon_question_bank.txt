@@ -64,6 +64,15 @@ Write an algorithm to find F(n) the number of bits set to 1, in all numbers from
     eg alphabet set : {a,e,i,o,u}
     print all palindromes of size say 10.
 
+23)  Find the all the sequence from Unsorted array.
+
+     Example : {2,4,6,8,10,14,11,12,15,7} is the unsorted array. We have to find out possible sequences.
+     Output would be :
+     Seq 1 : {2,4,6,8,10,11,12,15}
+     Seq 2 : {2,4,6,8,10,14,15}
+
+     Note : if I pick any element in array than next element would be grater than the previous element.
+
 **) Given a binary search tree with each node's structure as follows:
 
 struct Node
