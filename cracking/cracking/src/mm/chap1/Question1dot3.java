@@ -48,7 +48,7 @@ public class Question1dot3 {
      * @return
      */
     public String removeDupsNoSort(String str){
-        if(str == null || str.length() == 1){
+        if(str == null || str.length() <= 1){
             return str;
         }
         char[] input = str.toCharArray();
