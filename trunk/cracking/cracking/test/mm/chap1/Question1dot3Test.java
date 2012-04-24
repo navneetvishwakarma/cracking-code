@@ -28,8 +28,8 @@ public class Question1dot3Test extends TestCase {
     
     public void testRemoveDupsNoSort(){
         Question1dot3 singles = new Question1dot3();
-        String[] inputs = {"madam", "abcabc","aa","abc","ab","aabbcc"};
-        String[] expecteds = {"mad","abc","a","abc","ab","abc"};
+        String[] inputs = {"madam", "abcabc","aa","abc","ab","aabbcc",""};
+        String[] expecteds = {"mad","abc","a","abc","ab","abc",""};
         
         for(int i=0;i<inputs.length;i++){
             String output = singles.removeDupsNoSort(inputs[i]);
