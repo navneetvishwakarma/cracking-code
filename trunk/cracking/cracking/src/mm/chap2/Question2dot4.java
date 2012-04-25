@@ -28,7 +28,12 @@ public class Question2dot4 {
     
     
     private void _addNumbers(Node node1, Node node2, int carry, LinkedList resultList){
-        if(node1 == null && node2==null) return;
+        if(node1 == null && node2==null){
+            if(carry == 1){
+                resultList.append(new Node(1));
+            }
+            return;
+        }
         
         int sum = carry;
         
@@ -56,13 +61,13 @@ public class Question2dot4 {
     public static void main(String[] args) {
         Question2dot4 obj = new Question2dot4();
         
-        LinkedList list1 = new LinkedList();    //1976
-        list1.append(new Node(6)).append(new Node(7)).append(new Node(9)).append(new Node(1));
+        LinkedList list1 = new LinkedList();    //9999
+        list1.append(new Node(9)).append(new Node(9)).append(new Node(9)).append(new Node(9));
         
-        LinkedList list2 = new LinkedList();    //  76
-        list2.append(new Node(6)).append(new Node(7));
+        LinkedList list2 = new LinkedList();    //  1
+        list2.append(new Node(1));
         
-        LinkedList outputList = obj.addNumbers(list1,list2);    //2052
+        LinkedList outputList = obj.addNumbers(list1,list2);    //10000
         System.out.println(outputList.toString());
     }
 }
