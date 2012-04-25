@@ -14,37 +14,25 @@ import java.util.Set;
  * @author mmathuria
  */
 public class Question2dot1 {
-    
+
     public LinkedList removeDups(LinkedList list){
-        if(list == null){
-            throw new IllegalArgumentException("list cannot be null");
-        }
-        
-        if(list.head.next == null){
-            return list;
+        if(list == null || list.head == null){
+            return null;
         }
 
-        Set<Node> set = new HashSet<Node>();
-        Node p = list.head;
-        Node n = p.next();
-        set.add(p);
-        
-        while(n != null){
-            while(set.contains(n)){
-                n = n.next();
+        Set<Integer> set = new HashSet<Integer>();
+        Node current = list.head.next;
+        Node prev = list.head;
+        set.add(prev.iData);
+        while(current != null){
+            if (!set.contains(current.iData)) {
+                set.add(current.iData);
+                prev.next = current;
+                prev = current;
             }
-            
-            if(n == null ){
-                p.next = null;
-                break;
-            }
-
-            set.add(n);
-            p.next = n;
-            p = n;
-            n = n.next();
+            current = current.next();
         }
-        
+        prev.next = null;
         return list;
     }
 
@@ -57,41 +45,31 @@ public class Question2dot1 {
      * @return
      */
     public LinkedList removeDupsNoMem(LinkedList list){
-        if (list == null) {
-            throw new IllegalArgumentException("list cannot be null");
+        if(list == null || list.head == null){
+            return null;
         }
 
-        if (list.head.next == null) {
-            return list;
-        }
-
-        Node p = list.head;
-        Node n = p.next();
-        
-        while(n != null){
-            if(!isPresent(p,n, list.head)){
-                p.next = n;
-                p = n;
+        Node prev = list.head;
+        Node current = prev.next;
+        while(current != null){
+            if (!doesCurrentExists(list.head,prev, current)) {
+                prev.next = current;
+                prev = current;
             }
-            n = n.next;
+            current = current.next();
         }
-        p.next = null;
+        prev.next = null;
         return list;
     }
-    
-    
-    private boolean isPresent(Node end, Node n, Node head){
-        Node c = head;
-        while(true){
-            if(c.iData == n.iData){
+
+    private boolean doesCurrentExists(Node head, Node end, Node n){
+        Node current = head;
+        while(current.iData != end.iData){
+            if(current.iData == n.iData){
                 return true;
             }
-            
-            if(c == end){
-                return false;
-            }
-            
-            c = c.next;
+            current = current.next;
         }
+        return current.iData == n.iData;
     }
 }
