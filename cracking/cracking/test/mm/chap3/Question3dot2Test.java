@@ -56,4 +56,15 @@ public class Question3dot2Test extends TestCase {
         min = stack.min();
         assertEquals("incorrect min returned", 4, min);
     }
+    
+    public void testMultipleCopiesOfMinEl(){
+        Question3dot2 stack = new Question3dot2();
+        
+        stack.push(9);
+        stack.push(3);
+        stack.push(3);
+        
+        stack.pop();
+        assertEquals("incorrect min returned",3,stack.min());
+    }
 }
