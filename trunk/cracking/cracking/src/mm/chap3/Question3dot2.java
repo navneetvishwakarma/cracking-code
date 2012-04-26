@@ -36,7 +36,7 @@ public class Question3dot2 {
         
         stackA.push(value);
         
-        if(stackMin.isEmpty() || stackMin.peek() > value){
+        if(stackMin.isEmpty() || stackMin.peek() >= value){
             stackMin.push(value);
         }
     }
