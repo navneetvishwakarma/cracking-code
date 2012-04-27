@@ -30,17 +30,17 @@ public class Question3dot6Test extends TestCase {
         Stack s = createStack2();
         
         Question3dot6 qn = new Question3dot6();
-        Stack outputStk = qn.sortMyWay(s);
+        Stack outputStk = qn.sortMyWay2(s);
         
         assertNotNull("result is null",outputStk);
-        assertEquals("stacks dont have equal size", outputStk.count(), s.count());
         
         int upper = outputStk.pop();
-        for(int i=0;i<s.count()-1;i++){
+        for(int i=0;i<outputStk.count()-1;i++){
             int lower = outputStk.pop();
             assertTrue("upper is not smaller than lower", (upper <= lower));
             upper = lower;
         }
+        System.out.println(outputStk.toString());
         
     }
     

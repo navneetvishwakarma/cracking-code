@@ -53,4 +53,32 @@ public class Question3dot6 {
 
         return a;
     }
+
+    //pop an element (tmp) from stackA. if tmp < stackB.peek() then stackB.push(tmp)
+    //else start poping from stackB and pushing into stackA until tmp < stackB.pop()
+    //in that case push tmp to stackA and assign stackB.pop() to tmp. 
+    public Stack sortMyWay2(Stack stack){
+        Stack _stack = new Stack(stack.count());
+
+        while(!stack.isEmpty()){
+            int tmp = stack.pop();
+            if(_stack.isEmpty() || tmp < _stack.peek()){
+                _stack.push(tmp);
+            }
+            else {
+                while(!_stack.isEmpty()){
+                    int j = _stack.pop();
+                    if( j < tmp){
+                        stack.push(j);
+                    }else{
+                        stack.push(tmp);
+                        tmp = j;
+                    }
+                }
+                stack.push(tmp);
+            }
+        }
+
+        return _stack;
+    }
 }
