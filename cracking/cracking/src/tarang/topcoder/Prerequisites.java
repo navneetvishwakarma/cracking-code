@@ -4,7 +4,7 @@ package tarang.topcoder;
 import java.util.*;
 
 /**
- * Attempt at top coder question
+ * Attempt at 1000 point top coder question. http://j2eecode.blogspot.com/2009/12/topcoder-prerequisites.html
  *
  * @author tdesai
  */
