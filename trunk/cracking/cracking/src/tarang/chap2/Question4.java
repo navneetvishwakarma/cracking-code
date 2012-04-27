@@ -15,6 +15,26 @@ import tarang.datastructures.Node;
  */
 public class Question4 {
 
+    public static Node add2(Node ll1, Node ll2, boolean carry) {
+        int value = (carry ? 1 : 0);
+        if(ll1 == null && ll2 == null) {
+            return null;
+        }
+        if(ll1 != null) {
+            value += ll1.getValue();
+        }
+        if(ll2 != null) {
+            value += ll2.getValue();
+        }
+        carry = value > 9;
+        Node result = new Node(value % 10);
+        Node more = add2(ll1 == null ? null : ll1.getNext(),
+                ll2 == null ? null : ll2.getNext(),
+                carry);
+        result.setNext(more);
+        return result;
+    }
+
     public static LinkedList add(LinkedList list1, LinkedList list2) {
         if(list1 == null || list2 == null) {
             return null; // null plus anything is null
@@ -38,15 +58,15 @@ public class Question4 {
         } else if(list1Node == null) {
             while(list2Node != null) {
                 value = list2Node.getValue() + carry;
-                result.add(value);
-                carry = 0;
+                result.add(value % 10);
+                carry = value > 9 ? 1 : 0;
                 list2Node = list2Node.getNext();
             }
         } else {
             while (list1Node != null) {
                 value = list1Node.getValue() + carry;
-                result.add(value);
-                carry = 0;
+                result.add(value % 10);
+                carry = value > 9 ? 1 : 0;
                 list1Node = list1Node.getNext();
             }
         }
@@ -90,5 +110,22 @@ public class Question4 {
         list2.print();
         System.out.println("equals");
         result.print();
+
+
+
+        Node three = new Node(3);
+        Node one = new Node(1);
+        Node five = new Node(5);
+        three.setNext(one);
+        one.setNext(five);
+
+        Node five2 = new Node(5);
+        Node nine = new Node(9);
+        Node two = new Node(2);
+        five2.setNext(nine);
+        nine.setNext(two);
+
+        Node res = add2(three, five2, false);
+        res.getValue();
     }
 }
