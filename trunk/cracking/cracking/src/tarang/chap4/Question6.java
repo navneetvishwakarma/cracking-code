@@ -25,17 +25,21 @@ public class Question6 {
         if(tree == null) {
             return null;
         }
-        boolean left = contains(tree.getLeft(), node1) && contains(tree.getLeft(), node2);
-        boolean right = contains(tree.getRight(), node1) && contains(tree.getRight(), node2);
-        if(left)  {
+        boolean left1 = contains(tree.getLeft(), node1);
+        boolean left2 = contains(tree.getLeft(), node2);
+        boolean right1 = contains(tree.getRight(), node1);
+        boolean right2 = contains(tree.getRight(), node2);
+        if(left1 && left2)  {
             // both nodes are in left subtree
             return commonAncestor(tree.getLeft(), node1, node2);
-        } else if(right) {
+        } else if(right1 && right2) {
             // both nodes are in right subtree
             return commonAncestor(tree.getRight(), node1, node2);
-        } else {
+        } else if((left1 && right2) || (left2 && right1)){
             // the nodes are both neither in left or right, so one no each side
             return tree;
+        } else {
+            return null;
         }
     }
 
