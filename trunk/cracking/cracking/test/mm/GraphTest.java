@@ -22,7 +22,7 @@ import junit.framework.TestCase;
 public class GraphTest extends TestCase {
 
     public void testInsert(){
-        int size = 5;
+        int size = 9;
         Graph g = initGraph2(size);
         assertNotNull("graph is null",g);
         
@@ -36,7 +36,56 @@ public class GraphTest extends TestCase {
         Graph g = initGraph2(size);
         g.dfs();
     }
-    
+
+    public void testIsNotCyclic() throws Exception {
+        Graph g = new Graph(3);
+        g.addVertex('A');
+        g.addVertex('B');
+        g.addVertex('C');
+
+        g.addDirectedEdge(0,1);
+        g.addDirectedEdge(1,2);
+        
+        assertFalse("assertion incorrect",g.isCyclic());
+    }
+
+    public void testIsCyclic() throws Exception {
+        Graph g = new Graph(3);
+        g.addVertex('A');
+        g.addVertex('B');
+        g.addVertex('C');
+
+        g.addDirectedEdge(0,1);
+        g.addDirectedEdge(1,2);
+        g.addDirectedEdge(2,0);
+        
+        assertTrue("assertion incorrect",g.isCyclic());
+    }
+
+
+    public void testIsNotCyclic1() throws Exception {
+        Graph g = new Graph(8);
+        g.addVertex('A');
+        g.addVertex('B');
+        g.addVertex('C');
+        g.addVertex('D');
+        g.addVertex('E');
+        g.addVertex('F');
+        g.addVertex('G');
+        g.addVertex('H');
+        
+        g.addDirectedEdge(0,3);
+        g.addDirectedEdge(0,4);
+        g.addDirectedEdge(1,4);
+        g.addDirectedEdge(2,5);
+        g.addDirectedEdge(3,6);
+        g.addDirectedEdge(4,6);
+        g.addDirectedEdge(5,7);
+        g.addDirectedEdge(6,7);
+        
+        assertFalse("assertion incorrect",g.isCyclic());
+    }
+
     private Graph initGraph1(int size){
         Graph g = new Graph(size);
         g.addVertex('A');

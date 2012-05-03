@@ -95,4 +95,37 @@ public class Graph {
     public int vertexCount(){
         return count;
     }
+    
+    
+    public boolean isCyclic(){
+        while(vertexCount() > 0){
+            Vertex v = getNoSuccessorVertex();
+            if(v == null) return true;
+            else deleteVertex(v);
+        }
+        return false;
+    }
+    
+    private Vertex getNoSuccessorVertex(){
+        for(int i=0; i<adjMat.length; i++){
+            if(vertices[i].isDeleted()) continue;
+            boolean flag = true;
+            for(int j=0; j<adjMat[0].length; j++){
+                if(vertices[j].isDeleted()) continue;
+                if(adjMat[i][j] == 1) {
+                    flag = false;
+                    break;
+                }
+            }
+            if(flag){
+                return vertices[i];
+            }
+        }
+        return null;
+    }
+    
+    public void deleteVertex(Vertex v){
+        v.setDeleted(true);
+        --count;
+    }
 }

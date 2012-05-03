@@ -20,6 +20,7 @@ package mm;
 public class Vertex {
     private char data;
     private boolean visited;
+    private boolean deleted;
     
     public Vertex(char data){
         this.data = data;
@@ -36,5 +37,13 @@ public class Vertex {
 
     public void setVisited(boolean visited) {
         this.visited = visited;
+    }
+
+    public boolean isDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
     }
 }
