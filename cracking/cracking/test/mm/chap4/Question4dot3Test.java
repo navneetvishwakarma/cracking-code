@@ -26,7 +26,7 @@ public class Question4dot3Test extends TestCase {
         Question4dot3 obj = new Question4dot3();
         
         int[] data = {0, 3, 5, 7, 8, 9, 11, 21, 29};
-        BinaryTree tree= obj.createBinaryTree(data);
+        BinaryTree tree= obj.createMinimalBST(data);
         tree.displayInorder();
 
         //empty tree

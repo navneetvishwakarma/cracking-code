@@ -12,6 +12,11 @@
 package mm.chap4;
 
 import mm.BinaryTree;
+import mm.TreeNode;
+
+import java.util.AbstractQueue;
+import java.util.LinkedList;
+import java.util.Queue;
 
 
 /**
@@ -21,25 +26,55 @@ import mm.BinaryTree;
  */
 public class Question4dot3 {
     
-    public BinaryTree createBinaryTree(int[] input){
-        
-        if(input == null) throw new IllegalArgumentException("Input array cannot be null");
-        
-        BinaryTree tree = new BinaryTree();
-        doMagic(input, tree, 0, input.length-1);
-        return tree;
+    public BinaryTree createMinimalBST(int[] data){
+        TreeNode rootNode = _createMinimalBST(data,0,data.length-1);
+        BinaryTree bTree = new BinaryTree();
+        bTree.setRoot(rootNode);
+        return bTree;
     }
     
- 
-    private void doMagic(int[] input, BinaryTree tree, int start, int end){
-     
-        if(end < start) return;
+    
+    private TreeNode _createMinimalBST(int[] data, int start, int end){
+        if (end < start) return null;
         
         int middle = (start + end) / 2;
+        TreeNode node = new TreeNode(data[middle]);
         
-        tree.insert(input[middle]);
+        node.leftChild = _createMinimalBST(data, start,middle-1);
+        node.rightChild = _createMinimalBST(data,middle+1, end);
+        return node;
+    }
+    
+    
+    //the function remembers the last node with a null child. and inserts the newest node as its child. 
+    //it uses a queue to remember the last node with null child.
+    //this is similar to BST.
+    public BinaryTree createMinimalBT(int[] data){
+        BinaryTree bTree = new BinaryTree();
+        TreeNode rootNode = new TreeNode(data[0]);
+        bTree.setRoot(rootNode);
         
-        doMagic(input, tree, start, middle-1);
-        doMagic(input, tree, middle+1, end);
+        Queue<TreeNode> q = new LinkedList<TreeNode>();
+        q.add(rootNode);
+        
+        for(int i=1; i<data.length;i++){
+            while(!q.isEmpty()){
+                TreeNode n = q.peek();
+                if(n.getLeftChild() == null){
+                    n.leftChild = new TreeNode(data[i]);
+                    q.add(n.leftChild);
+                    break;
+                }
+                if(n.rightChild == null){
+                    n.rightChild = new TreeNode(data[i]);
+                    q.add(n.rightChild);
+                    break;
+                }
+                if(n.leftChild != null && n.rightChild != null){
+                    q.remove();
+                }
+            }
+        }
+        return bTree;
     }
 }
