@@ -6,7 +6,7 @@ package tarang.designpatterns.factorymethod;
  *
  * @author tdesai
  */
-public class Pizza {
+public abstract class Pizza {
 
     void prepare() {
 
