@@ -24,49 +24,45 @@ public class Traversal {
     // O(V + E)
     public static void depthFirstSearch(TGraph graph) {
         // keep visiting childern until dead end, then backtrack to the previous
-        Map<TNode, TNode> previous = new HashMap<TNode, TNode>();
-        TNode root = graph.getRoot();
-        previous.put(root, null);
-        dfsVisit(root, graph, previous);
-    }
-
-    private static void dfsVisit(TNode node, TGraph graph, Map<TNode, TNode> previous) {
-        System.out.println("Visiting -> " + node + " ");
-        if (graph.getEdges().get(node) != null) {   // if no edge to any other node then done with this one
-            for (TNode neighbor : graph.getEdges().get(node)) {
-                if (neighbor.isVisited()) {
-                    // skip this
-                    continue;
-                }
-                previous.put(neighbor, node);
-                dfsVisit(neighbor, graph, previous);
+        Map<TNode, TNode> parent = new HashMap<TNode, TNode>();
+        for(TNode vertex : graph.getVertices()) {
+            parent.put(vertex, null);
+            if(!vertex.isDiscovered()) {
+                dfsVisit(vertex, graph, parent);
             }
         }
-        node.setVisited(true);
-        if(previous.get(node) != null) {
-            // back track
-            dfsVisit(previous.get(node), graph, previous);
-        } else {
-            System.out.println("Root -> " + node + " ");
+    }
+
+    private static void dfsVisit(TNode node, TGraph graph, Map<TNode, TNode> parent) {
+        System.out.println("Visiting -> " + node + " ");
+        node.setDiscovered(true);
+        if (graph.getEdges().get(node) != null) {   // if no edge to any other node then done with this one
+            for (TNode neighbor : graph.getEdges().get(node)) {
+                if (!neighbor.isDiscovered()) {
+                    parent.put(neighbor, node);
+                    dfsVisit(neighbor, graph, parent);
+                }
+            }
         }
     }
 
     // O(V + E)
     public static void breadthFirstSearch(TGraph graph) {
-        List<TNode> unexplored = new java.util.LinkedList<TNode>();
+        List<TNode> unexplored = new ArrayList<TNode>();
         unexplored.add(graph.getRoot());
+        graph.getRoot().setDiscovered(true);
 
         while (unexplored.size() > 0) {
             TNode curr = unexplored.remove(0);
             System.out.println("Explore -> " + curr + " ");
             if (graph.getEdges().get(curr) != null) {
                 for (TNode neighbor : graph.getEdges().get(curr)) {
-                    if (!neighbor.isVisited()) {
+                    if (!neighbor.isDiscovered()) {
                         unexplored.add(neighbor);
+                        neighbor.setDiscovered(true);
                     }
                 }
             }
-            curr.setVisited(true);
         }
     }
 
@@ -92,8 +88,8 @@ public class Traversal {
         graph.addEdge(d, e);
         graph.addEdge(e, g);
 
-        //Traversal.depthFirstSearch(graph);
-        Traversal.breadthFirstSearch(graph);
+        Traversal.depthFirstSearch(graph);
+        //Traversal.breadthFirstSearch(graph);
     }
 }
 
@@ -120,11 +116,15 @@ class TGraph {
     public Map<TNode, List<TNode>> getEdges() {
         return edges;
     }
+
+    public Set<TNode> getVertices() {
+        return getEdges().keySet();
+    }
 }
 
 class TNode {
     private String name;
-    private boolean visited;
+    private boolean discovered = false;
 
     TNode(String name) {
         this.name = name;
@@ -134,12 +134,12 @@ class TNode {
         return name;
     }
 
-    public boolean isVisited() {
-        return visited;
+    public boolean isDiscovered() {
+        return discovered;
     }
 
-    public void setVisited(boolean visited) {
-        this.visited = visited;
+    public void setDiscovered(boolean discovered) {
+        this.discovered = discovered;
     }
 
     @Override
