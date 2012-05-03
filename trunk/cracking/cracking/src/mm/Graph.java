@@ -96,7 +96,10 @@ public class Graph {
         return count;
     }
     
-    
+
+    //the function basically looks for a node that has no outgoing edges (no successor). If it finds such a node it deletes
+    //it from the Graph. A non-cyclic graph will have all its node deleted. On the other hand, a non-cyclic graph will have
+    //vertices pointing to each other (and thus the getNoSuccessorVertex() method will return null).
     public boolean isCyclic(){
         while(vertexCount() > 0){
             Vertex v = getNoSuccessorVertex();
