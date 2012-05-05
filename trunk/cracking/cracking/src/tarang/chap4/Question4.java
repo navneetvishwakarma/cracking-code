@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * Given a binary search tree, design an algorithm which creates a linked list of all the nodes at each depth (i e , if
- * you have a tree with depth D, youÕll have D linked lists)
+ * you have a tree with depth D, youll have D linked lists)
  *
  * @author tdesai
  */
