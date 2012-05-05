@@ -1,5 +1,3 @@
-package tarang.clout;
-
 import java.io.*;
 import java.util.*;
 
@@ -38,6 +36,7 @@ import java.util.*;
  * <p/>
  * Please provide directions for running the program and or tests. You may use any language, but Scala (followed by
  * Java) would be best. If you don’t know Scala, we would love to see you try it out!
+ *
  */
 public class BestSpelling {
     // static set of alphabets in English language
@@ -76,7 +75,7 @@ public class BestSpelling {
         while(true) {
             System.out.print("> ");
             String input = s.nextLine();
-            String res = suggest(input);
+            String res = suggest(input.toLowerCase());
             if(res != null) {
                 System.out.println(res);
             } else {
@@ -92,7 +91,7 @@ public class BestSpelling {
         BufferedReader reader = new BufferedReader(new InputStreamReader(in));
         Set<String> words = new HashSet<String>();
         while((line = reader.readLine()) != null) {
-            words.add(line.trim());
+            words.add(line.toLowerCase().trim());
         }
         // once loaded, this set cannot be modified
         dict = Collections.unmodifiableSet(words);
@@ -190,15 +189,12 @@ public class BestSpelling {
 
     }
 
-
-
     public static void main(String[] args) throws IOException {
-        /*if(args.length == 0) {
-            System.out.println("Please provide a file path. Quiting...");
+        if(args.length == 0) {
+            System.out.println("Please provide a file path. Quiting.");
             return;
-        }*/
-        //String dict_fn = args[0];
-        String dict_fn = "/Users/tdesai/IdeaProjects/interview/src/tarang/clout/english.0";
+        }
+        String dict_fn = args[0];
         new BestSpelling(new FileInputStream(new File(dict_fn))).run();
     }
 
