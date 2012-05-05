@@ -40,12 +40,14 @@ public class BinaryTree {
         if(newNode.data <= current.data){
             if(current.leftChild == null){
                 current.leftChild = newNode;
+                newNode.parent = current;
             }else{
                 recursiveInsert(current.leftChild,newNode);
             }
         }else{
             if(current.rightChild == null){
                 current.rightChild = newNode;
+                newNode.parent = current;
             }else{
                 recursiveInsert(current.rightChild, newNode);
             }
@@ -102,6 +104,15 @@ public class BinaryTree {
         return current;
     }
     
+    public TreeNode binarySearch(int data){
+        TreeNode current = root;
+        while(current != null){
+            if(current.data == data) break;
+            if(current.data > data)    current = current.leftChild;
+            else current = current.rightChild;
+        }
+        return current;
+    }
     
     public void displayInorder(){
         if(root == null){

@@ -31,7 +31,7 @@ public class Question4dot3Test extends TestCase {
 
         //empty tree
         data = new int[0];
-        tree = obj.createBinaryTree(data);
+        tree = obj.createMinimalBST(data);
         tree.displayInorder();
     }
 }
