@@ -1,4 +1,4 @@
-package tarang.hulu;
+package tarang.lulu;
 
 import java.util.*;
 
