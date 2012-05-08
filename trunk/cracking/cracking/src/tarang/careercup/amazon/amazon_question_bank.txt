@@ -73,6 +73,9 @@ Write an algorithm to find F(n) the number of bits set to 1, in all numbers from
 
      Note : if I pick any element in array than next element would be grater than the previous element.
 
+24) Given a BST, convert it so that each node has value equal to sum of all the nodes (including itself) which are
+    greater than that node in the whole tree.
+
 **) Given a binary search tree with each node's structure as follows:
 
 struct Node
