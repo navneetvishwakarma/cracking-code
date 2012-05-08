@@ -58,7 +58,7 @@ public class Question4dot6 {
         BinaryTree tree = new BinaryTree(8);
 
         TreeNode seven = new TreeNode(7);
-        TreeNode five = new TreeNode(3);
+        TreeNode five = new TreeNode(5);
         TreeNode nine = new TreeNode(9);
         TreeNode four = new TreeNode(4);
         TreeNode one = new TreeNode(1);
