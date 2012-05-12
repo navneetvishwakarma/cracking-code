@@ -25,15 +25,11 @@ public class Question9dot1 {
         int i = a.length -1;
         int j = b.length -1;
         
-        while(i >= 0){
+        while(m >= 0 && j >= 0){
             if(a[m] >= b[j]){
                 a[i--] = a[m--];
             }else{
                 a[i--] = b[j--];
-            }
-            
-            if(m < 0 || j < 0){
-                break;
             }
         }
         
