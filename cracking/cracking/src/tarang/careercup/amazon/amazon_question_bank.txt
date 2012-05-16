@@ -82,6 +82,8 @@ Write an algorithm to find F(n) the number of bits set to 1, in all numbers from
 
 26) Implement an in-order traversal of a binary tree using iterator's method
 
+27) Implement the math power function while minimizing the number of multiplications
+
 **) Given a binary search tree with each node's structure as follows:
 
 struct Node
