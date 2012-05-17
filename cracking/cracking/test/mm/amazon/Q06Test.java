@@ -9,8 +9,8 @@ import java.util.ArrayList;
 /**
  * Put class JavaDoc here
  */
-public class Question06Test extends TestCase {
-    Question06 testObj = new Question06();
+public class Q06Test extends TestCase {
+    Q06 testObj = new Q06();
     
     public void testCountNodesAtEachLevel(){
 
@@ -39,7 +39,7 @@ public class Question06Test extends TestCase {
     
     public void testCountNodesBelow(){
 
-        BinaryTree tree = Q03_BT.createFromInOrder(new int[]{3,4,5,6,7,9,17,20,22});
+        BinaryTree tree = Q03_BT.createFromInOrder(new int[]{3, 4, 5, 6, 7, 9, 17, 20, 22});
         ArrayList<Integer> output = new ArrayList<Integer>();
         int count = testObj.countNodesBelowGiven(tree.getRoot().leftChild);
 

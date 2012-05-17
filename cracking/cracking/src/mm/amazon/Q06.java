@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * Given a binary tree count the number of nodes at each level in the tree. Follow up: count the number of nodes below 
  * each node
  */
-public class Question06 {
+public class Q06 {
     
     public void countNodesAtEachLevel(TreeNode node, int depth, ArrayList<Integer> list){
         if(node == null) return;
