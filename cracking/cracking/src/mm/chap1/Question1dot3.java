@@ -19,6 +19,26 @@ public class Question1dot3 {
      * @return
      */
     public String removeDups(String str){
+
+        if(str == null || str.length() == 1){
+            return str;
+        }
+        char[] input = str.toCharArray();
+        Arrays.sort(input);
+        int current = 0;
+        int next = 1;
+
+        while(next < str.length()){
+            if(input[current] != input[next]){
+                input[++current] = input[next];
+            }
+            next++;
+        }
+        return new String(input,0,current+1);
+    }
+
+
+    public String removeDups2(String str){
         
         if(str == null || str.length() == 1){
             return str;
@@ -39,7 +59,6 @@ public class Question1dot3 {
         }
         return new String(input,0,current+1);
     }
-
 
     /**
      * Removes dups without sorting the input string
