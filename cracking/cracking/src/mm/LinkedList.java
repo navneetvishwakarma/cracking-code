@@ -19,7 +19,7 @@ package mm;
  */
 public class LinkedList {
     public Node head;
-    private Node tail;
+    public Node tail;
 
     public LinkedList() {
     }
