@@ -1,6 +1,8 @@
 package tarang.chap1;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 
 /**
@@ -20,31 +22,30 @@ public class Question4 {
     }
 
     public static boolean anagrams2(char[] str1, char[] str2) {
-        if (str1.length != str2.length) {
-            return false;
-        }
-        boolean[] bools = new boolean[256];
+        // use a hashmap
+        Map<Character, Integer> map = new HashMap<Character, Integer>();
         for(char c : str1) {
-            bools[c] = true;
-        }
-        for (char c : str2) {
-            bools[c] = false;
-        }
-        for(boolean bool : bools) {
-            if(bool) {
-                return false;
+            Integer count = map.get(c);
+            if(count == null) {
+                count = 1;
+            } else {
+                count++;
             }
+            map.put(c, count);
         }
 
-        bools = new boolean[256];
-        for (char c : str2) {
-            bools[c] = true;
+        for(char c : str2) {
+            Integer count = map.get(c);
+            if(count == null) {
+                return false;
+            } else {
+                count--;
+            }
+            map.put(c, count);
         }
-        for (char c : str1) {
-            bools[c] = false;
-        }
-        for (boolean bool : bools) {
-            if (bool) {
+
+        for(Integer count : map.values()) {
+            if(count != 0) {
                 return false;
             }
         }

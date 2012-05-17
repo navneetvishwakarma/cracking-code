@@ -84,6 +84,10 @@ Write an algorithm to find F(n) the number of bits set to 1, in all numbers from
 
 27) Implement the math power function while minimizing the number of multiplications
 
+28) Write a recursive and non-recursive program to generate all possible substrings of a string.
+
+29) Write code for returning a random line from a file of unknown size and variable length rows.
+
 **) Given a binary search tree with each node's structure as follows:
 
 struct Node
