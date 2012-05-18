@@ -1,7 +1,7 @@
 package mm.chap4;
 
 
-import mm.TreeNode;
+import mm.ds.TreeNode;
 
 /**
  * You have two very large binary trees: T1, with millions of nodes, and T2, with hundreds of nodes	Create an

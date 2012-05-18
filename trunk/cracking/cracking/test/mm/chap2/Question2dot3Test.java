@@ -2,10 +2,8 @@ package mm.chap2;
 
 
 import junit.framework.TestCase;
-import mm.LinkedList;
-import mm.Node;
-
-import java.util.LinkedHashSet;
+import mm.ds.LinkedList;
+import mm.ds.Node;
 
 /**
  * Put class JavaDoc here

@@ -11,10 +11,10 @@
 
 package mm.chap4;
 
-import mm.BinaryTree;
-import mm.LinkedList;
-import mm.Node;
-import mm.TreeNode;
+import mm.ds.BinaryTree;
+import mm.ds.LinkedList;
+import mm.ds.Node;
+import mm.ds.TreeNode;
 
 import java.util.ArrayList;
 

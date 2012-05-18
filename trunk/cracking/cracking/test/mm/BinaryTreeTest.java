@@ -1,6 +1,8 @@
 package mm;
 
 import junit.framework.TestCase;
+import mm.ds.BinaryTree;
+import mm.ds.TreeNode;
 
 
 /**

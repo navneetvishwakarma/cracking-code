@@ -1,7 +1,7 @@
 package mm.amazon;
 
 
-import mm.TreeNode;
+import mm.ds.TreeNode;
 
 import java.util.ArrayList;
 

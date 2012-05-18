@@ -11,9 +11,7 @@
 
 package mm.chap3;
 
-import mm.Stack;
-
-import java.util.EmptyStackException;
+import mm.ds.Stack;
 
 
 /**

@@ -11,8 +11,8 @@
 
 package mm.chap4;
 
-import mm.BinaryTree;
-import mm.TreeNode;
+import mm.ds.BinaryTree;
+import mm.ds.TreeNode;
 
 
 /**

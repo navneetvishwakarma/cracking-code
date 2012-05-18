@@ -12,8 +12,8 @@
 package mm.chap4;
 
 import junit.framework.TestCase;
-import mm.Graph;
-import mm.Vertex;
+import mm.ds.Graph;
+import mm.ds.Vertex;
 
 
 /**

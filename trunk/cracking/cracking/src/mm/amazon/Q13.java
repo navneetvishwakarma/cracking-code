@@ -1,12 +1,10 @@
 package mm.amazon;
 
-import mm.BinaryTree;
-import mm.TreeNode;
+import mm.ds.BinaryTree;
+import mm.ds.TreeNode;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 /**

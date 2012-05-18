@@ -11,7 +11,7 @@
 
 package mm.chap2;
 
-import mm.Node;
+import mm.ds.Node;
 
 
 /**

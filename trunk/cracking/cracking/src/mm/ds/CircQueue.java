@@ -1,4 +1,4 @@
-package mm;
+package mm.ds;
 
 import java.util.NoSuchElementException;
 
@@ -8,44 +8,40 @@ import java.util.NoSuchElementException;
  *
  * @author mmathuria
  */
-public class CircQueue2 {
-
-
+public class CircQueue {
     private int[] store;
     private int front, rear;
     private int currentCount;
 
 
-    public CircQueue2(int size) {
+    public CircQueue(int size) {
         store = new int[size];
         front = rear = -1;
     }
 
-    public void insert(int i) throws IllegalStateException {
+    public void insert(int i) throws IllegalStateException{
         if (isFull()) throw new IllegalStateException("Queue is full");
         if (rear == store.length - 1) rear = -1;
         store[++rear] = i;
         currentCount++;
     }
-
-
-    public int remove() throws NoSuchElementException {
-        if (isEmpty()) throw new NoSuchElementException("Queue is empty");
-        if (front == store.length - 1) front = -1;
+    
+    
+    public int remove() throws NoSuchElementException{
+        if(isEmpty()) throw new NoSuchElementException("Queue is empty");
+        if(front == store.length-1) front = -1;
         currentCount--;
-        int tmp =  store[++front];
-        store[front] = -1;
-        return tmp;
+        return store[++front];
     }
 
-    public boolean isEmpty() {
-        return (rear == front || (front + store.length == rear));
-        //return (rear + 1 == front || (front + maxSize - 1 == rear));
+    
+    public boolean isFull(){
+        return (currentCount == store.length);
     }
-
-    public boolean isFull() {
-        return (rear + 1 == front || (front + store.length - 1 == rear));
-        //return (rear + 2 == front || (front + maxSize - 2 == rear));
+    
+    
+    public boolean isEmpty(){
+        return (currentCount == 0);
     }
 
     public int count() {
