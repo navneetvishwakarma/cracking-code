@@ -11,34 +11,25 @@ import mm.ds.Node;
  */
 public class Q12 {
     
-    public LinkedList reverseSLL(LinkedList list){
-        if(list.head() == null){
-            throw new IllegalArgumentException("list cannot be null");
-        }
-        
-        //if the list has only one element
-        if(list.head().next() == null){
-            return list;
-        }
+   public LinkedList reverseSLL(LinkedList list){
+       if(list.head() == null){
+           throw new IllegalArgumentException("list cannot be null");
+       }
 
-        
-        Node a = list.head();
-        Node b = a.next();
-        Node c = b.next();
-        a.next = null;
-        
-        while(c != null){
-            b.next = a;
-            a = b;
-            b = c;
-            c = b.next();
-        }
-        b.next = a;
-        list.head = b;
-        
-        return list;
-    }
-
+       Node a = null;
+       Node b = list.head;
+       Node c = b.next;
+       
+       while(b != null){
+           b.next = a;
+           a = b;
+           b = c;
+           if(c != null) c = c.next;
+       }
+       list.head = a;
+       
+       return list;
+   } 
     
     public LinkedList reverseDLL(LinkedList list){
         if(list == null){
@@ -79,6 +70,13 @@ public class Q12 {
         System.out.println(singlyLL.toString());
         q12.reverseSLL(singlyLL);
         System.out.println(singlyLL.toString());
+
+        //single node
+        singlyLL = new LinkedList();
+        singlyLL.append(new Node(1));
+        System.out.println(singlyLL.toString());
+        q12.reverseSLL(singlyLL);
+        System.out.println(singlyLL.toString());
     }
     
     
@@ -100,6 +98,34 @@ public class Q12 {
         q12.doReverseSLL(q12);
         System.out.println("\nDoubly");
         q12.doReverseDLL(q12);
+    }
+
+    public LinkedList reverseSLL2(LinkedList list){
+        if(list.head() == null){
+            throw new IllegalArgumentException("list cannot be null");
+        }
+
+        //if the list has only one element
+        if(list.head().next() == null){
+            return list;
+        }
+
+
+        Node a = list.head();
+        Node b = a.next();
+        Node c = b.next();
+        a.next = null;
+
+        while(c != null){
+            b.next = a;
+            a = b;
+            b = c;
+            c = b.next();
+        }
+        b.next = a;
+        list.head = b;
+
+        return list;
     }
 
 }
