@@ -1,7 +1,7 @@
 package mm.chap4;
 
 
-import mm.TreeNode;
+import mm.ds.TreeNode;
 
 /**
  * Write an algorithm to find the ‘next’ node (e g , in-order successor) of a given node in a binary search tree where

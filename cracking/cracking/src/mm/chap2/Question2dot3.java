@@ -1,7 +1,7 @@
 package mm.chap2;
 
 
-import mm.Node;
+import mm.ds.Node;
 
 /**
  Implement an algorithm to delete a node in the middle of a single linked list, given only access to that node

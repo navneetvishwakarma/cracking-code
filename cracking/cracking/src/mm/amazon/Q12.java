@@ -1,7 +1,7 @@
 package mm.amazon;
 
-import mm.LinkedList;
-import mm.Node;
+import mm.ds.LinkedList;
+import mm.ds.Node;
 
 
 /**

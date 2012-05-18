@@ -11,10 +11,9 @@
 
 package mm.chap4;
 
-import mm.BinaryTree;
-import mm.TreeNode;
+import mm.ds.BinaryTree;
+import mm.ds.TreeNode;
 
-import java.util.AbstractQueue;
 import java.util.LinkedList;
 import java.util.Queue;
 

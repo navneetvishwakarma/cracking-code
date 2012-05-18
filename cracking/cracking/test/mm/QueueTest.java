@@ -1,6 +1,7 @@
 package mm;
 
 import junit.framework.TestCase;
+import mm.ds.Queue;
 
 
 /**

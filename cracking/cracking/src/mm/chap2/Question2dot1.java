@@ -1,7 +1,7 @@
 package mm.chap2;
 
-import mm.LinkedList;
-import mm.Node;
+import mm.ds.LinkedList;
+import mm.ds.Node;
 
 import java.util.HashSet;
 import java.util.Set;

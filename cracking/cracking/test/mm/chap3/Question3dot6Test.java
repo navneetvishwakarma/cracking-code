@@ -11,11 +11,8 @@
 
 package mm.chap3;
 
-import mm.Stack;
+import mm.ds.Stack;
 import junit.framework.TestCase;
-
-import java.util.Arrays;
-import java.util.List;
 
 
 /**

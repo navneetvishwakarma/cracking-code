@@ -1,4 +1,4 @@
-package mm;
+package mm.ds;
 
 import java.util.Arrays;
 import java.util.Collections;

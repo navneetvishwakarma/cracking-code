@@ -12,7 +12,7 @@
 package mm.chap4;
 
 import junit.framework.TestCase;
-import mm.BinaryTree;
+import mm.ds.BinaryTree;
 
 
 /**

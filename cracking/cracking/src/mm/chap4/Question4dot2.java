@@ -11,9 +11,8 @@
 
 package mm.chap4;
 
-import mm.Graph;
-import mm.Node;
-import mm.Vertex;
+import mm.ds.Graph;
+import mm.ds.Vertex;
 
 
 /**

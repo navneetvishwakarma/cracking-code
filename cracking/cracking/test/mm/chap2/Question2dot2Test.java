@@ -1,8 +1,8 @@
 package mm.chap2;
 
 import junit.framework.TestCase;
-import mm.LinkedList;
-import mm.Node;
+import mm.ds.LinkedList;
+import mm.ds.Node;
 
 
 /**
