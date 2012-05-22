@@ -6,8 +6,6 @@ import tarang.datastructures.Node;
 /**
  * Input linkedlist : 1->9->3->8->5->7->7. Odd indexed are increasin and even indexed are descreasing.
  *
- * http://apu.edge.epoll.com/edge/control/getView?viewid=12311
- *
  * @author tdesai
  */
 public class Question20 {
