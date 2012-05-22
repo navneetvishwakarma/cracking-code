@@ -36,6 +36,10 @@ public class LinkedList {
         tail = n; 
         return this;
     }
+
+    public LinkedList append(int d){
+        return append(new Node(d));
+    }
     
     public void appendDLL(Node n){
         if(n == null)  return;
@@ -72,9 +76,11 @@ public class LinkedList {
     public String toString(){
         StringBuilder sbuf = new StringBuilder();
         Node current = head;
-        while(current != null){
-            sbuf.append(current.getiData()).append("-->");
+        while(true){
+            sbuf.append(current.getiData());
             current = current.next;
+            if(current == null) break;
+            sbuf.append("-->");
         }
         return sbuf.toString();
     }
