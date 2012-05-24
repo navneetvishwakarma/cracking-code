@@ -24,6 +24,12 @@ public class BinaryTree {
         return root;
     }
 
+    public void insertPreorder(int[] data){
+        for(int d : data){
+            insert(d);
+        }
+    }
+    
     public void insert(int data){
         TreeNode newNode = new TreeNode(data);
         
