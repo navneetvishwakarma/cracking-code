@@ -86,6 +86,15 @@ Write an algorithm to find F(n) the number of bits set to 1, in all numbers from
 
 28) Write a recursive and non-recursive program to generate all possible substrings of a string.
 
+29) Delete extra spaces in a string
+
+30) How do you check a Sudoku game to make sure all the rules have been respected?
+
+31) Find maximum subsequence from a list of numbers containing negative numbers.
+Eg. Max subseq in: {-10, 4, 14, -20, 23, 12, 11, -100} is 46 : {23, 12, 11}
+
+32) Reverse a linkedlist. 1 -> 2 -> 3 -> 4 -> 5 to 5 -> 4 -> 3 -> 2 -> 1
+
 **) Given a binary search tree with each node's structure as follows:
 
 struct Node
@@ -274,3 +283,6 @@ Given a binary tree print the largest part of binary tree that satisfies the pro
 Given an integer find the next (smallest number greater than given number) integer which is palindrome
 Example: Input: 111 Output: 121, Input: 301 Output: 313
 
+**)
+Given a large document and a short pattern consisting of a few words (eg. W1 W2 W3), find the shortest string that has
+all the words in any order (for eg. W2 foo bar dog W1 cat W3 -- is a valid pattern)
