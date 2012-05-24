@@ -52,6 +52,7 @@ public class Question20 {
     }
 
     public static void main(String[] args) {
-        straightenOut(new Node(1, 9, 3, 8, 5, 7, 7));
+        Node node = straightenOut(new Node(1, 9, 3, 8, 5, 7, 7));
+        System.out.print(node);
     }
 }
