@@ -13,17 +13,19 @@ public class Question05 {
         int start = 0;
         int end = chars.length - 1;
         while(start < end) {
-            if(!Character.isLetterOrDigit(chars[start])) {
-                start++;
+            while(start < end && !Character.isLetterOrDigit(chars[start])) {
+                start++;    // advance until we hit a character that is letter or digit
             }
-            if (!Character.isLetterOrDigit(chars[end])) {
-                end--;
+            while(start < end && !Character.isLetterOrDigit(chars[end])) {
+                end--;  // advance until we hit a character that is letter or digit
             }
-            if(Character.isLetterOrDigit(chars[start]) && Character.isLetterOrDigit(chars[end])) {
-                if(chars[start] != chars[end]) {
-                    return false;
-                }
+            if(start >= end) {
+                return true;
+            }
+            if(chars[start] == chars[end]) {
                 start++; end--;
+            } else {
+                return false;
             }
         }
         return true;

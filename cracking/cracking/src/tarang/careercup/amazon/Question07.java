@@ -18,10 +18,10 @@ public class Question07 {
         int leftSum = maxSumPath(node.getLeft());
         int rightSum = maxSumPath(node.getRight());
         if(leftSum > rightSum) {
-            node.setPred(node.getLeft());
+            node.setPred(node.getLeft());   // setPred should be setNext
             return node.getValue() + leftSum;
         } else {
-            node.setPred(node.getRight());
+            node.setPred(node.getRight());  // setPred should be setNext
             return node.getValue() + rightSum;
         }
     }

@@ -18,7 +18,21 @@ public class Question18 {
         return res;
     }
 
+    public static int maxDiff2(int[] A) {
+        int minSoFar = A[0];
+        int res = Integer.MIN_VALUE;
+        for(int i = 1; i < A.length; i++) {
+            if(res < A[i] - minSoFar) {
+                res = A[i] - minSoFar;
+            }
+            if(minSoFar > A[i]) {
+                minSoFar = A[i];
+            }
+        }
+        return res;
+    }
+
     public static void main(String[] args) {
-        System.out.println(maxDiff(new int[]{1, 9, 14, 5, 23, 34, 40}));
+        System.out.println(maxDiff2(new int[]{1, 9, 14, 5, 23, 34, 40}));
     }
 }

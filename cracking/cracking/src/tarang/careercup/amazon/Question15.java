@@ -2,7 +2,7 @@ package tarang.careercup.amazon;
 
 
 /**
- * Find the maximum subarray in an array with negative numbers
+ * Find the maximum subarray in an array with negative numbers. A better linear time algorithm in Question31. EFF this impl.
  *
  * @author tdesai
  */

@@ -28,8 +28,9 @@ public class Question14 {
         input += 1;
         int count = 0;
         int k = (int) Math.log(input) + 1;
+        int bitlevel = 1;
         for(int i = 0; i <= k; i++) {
-            int bitlevel = (int) Math.pow(2.0, (i+1)*1.0);  // 2, 4, 8, 16, 32...
+            bitlevel <<= 1;  // 2, 4, 8, 16, 32...
             int quotient = input / bitlevel;
             count += quotient * bitlevel/2;
             int mod = input % bitlevel - bitlevel/2;

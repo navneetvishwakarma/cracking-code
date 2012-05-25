@@ -21,10 +21,12 @@ public class Question11 {
         this.MAX_CAPACITY = max_capacity;
     }
 
+    // give me closest N number of points
     public List<Point> closestPoints(int N) {
         List<Point> points = new ArrayList<Point>();
         while(pq.size() > 0 && points.size() <= N) {
             if(pq.size() > N) {
+                // remove all points until N are left
                 pq.poll();
             } else {
                 points.add(pq.poll());
@@ -36,6 +38,7 @@ public class Question11 {
     public void addPoint(Point p) {
         this.pq.add(p);
         if(pq.size() > MAX_CAPACITY) {
+            // if size is greater then limit then remove the top
             pq.poll();
         }
     }
@@ -54,6 +57,7 @@ public class Question11 {
 
 class Point implements Comparable {
     double x, y;
+    public final static Point ORIGIN = new Point(0, 0);
 
     public Point() {
         // random points
@@ -68,12 +72,11 @@ class Point implements Comparable {
     }
 
     public double distance(Point that) {
+        // euclidean distance between this and that point
         return Math.sqrt(Math.pow(this.x - that.x, 2.0) + Math.pow(this.y - that.y, 2.0));
     }
 
     public int compareTo(Object o) {
-        Point ORIGIN = new Point(0, 0);
-
         double dist1 = distance(ORIGIN);
         double dist2 = ((Point) o).distance(ORIGIN);
         if(dist1 == dist2) {

@@ -45,14 +45,14 @@ public class Question06 {
     }
 
     private static int countNodes(TreeNode node, Map<Integer, Integer> nodeCount) {
-        int currNodeCnt = 0;
+        int currNodeCnt = 0;    // each not starts out with 0
         if(node.getLeft() != null) {
-            currNodeCnt += 1;
-            currNodeCnt += countNodes(node.getLeft(), nodeCount);
+            currNodeCnt += 1;   // has left node, add 1
+            currNodeCnt += countNodes(node.getLeft(), nodeCount);   // count whats in the left subtree
         }
         if(node.getRight() != null) {
-            currNodeCnt += 1;
-            currNodeCnt += countNodes(node.getRight(), nodeCount);
+            currNodeCnt += 1;   // has right node, add 1
+            currNodeCnt += countNodes(node.getRight(), nodeCount);  // count whats in the right subtree
         }
         nodeCount.put(node.getValue(), currNodeCnt);
         return currNodeCnt;

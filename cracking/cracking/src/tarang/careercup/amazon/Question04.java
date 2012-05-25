@@ -16,7 +16,7 @@ public class Question04 {
         if(A == null || A.length == 0) {
             throw new IllegalArgumentException("input array null or empty");
         }
-        // find the min
+        // find the min and max
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
         for(int a : A) {

@@ -56,7 +56,7 @@ Write an algorithm to find F(n) the number of bits set to 1, in all numbers from
  Add a method that displays the names of all subordinates for a given employee.
  Calculate the complexity. Do not use multiple classes.
 
-20) Input linkedlist : 1->9->3->8->5->7->7. Odd indexed are increasin and even indexed are descreasing.
+20) Input linkedlist : 1->9->3->8->5->7->7. Odd indexed are increasing and even indexed are descreasing.
 
 21) Return true if two trees are same
 
@@ -92,8 +92,6 @@ Write an algorithm to find F(n) the number of bits set to 1, in all numbers from
 
 31) Find maximum subsequence from a list of numbers containing negative numbers.
 Eg. Max subseq in: {-10, 4, 14, -20, 23, 12, 11, -100} is 46 : {23, 12, 11}
-
-32) Reverse a linkedlist. 1 -> 2 -> 3 -> 4 -> 5 to 5 -> 4 -> 3 -> 2 -> 1
 
 **) Given a binary search tree with each node's structure as follows:
 
