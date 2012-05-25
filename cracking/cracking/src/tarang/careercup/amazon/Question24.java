@@ -1,6 +1,7 @@
 package tarang.careercup.amazon;
 
 
+import tarang.datastructures.Node;
 import tarang.datastructures.TreeNode;
 
 /**
@@ -11,24 +12,18 @@ import tarang.datastructures.TreeNode;
  */
 public class Question24 {
 
-    public static int sumGreater(TreeNode node, int sumSoFar) {
+    public static int sumGreater(TreeNode node, int sumSofar) {
         if(node == null) {
-            return sumSoFar;
+            return sumSofar;
         }
-        node.setValue(node.getValue() + sumGreater(node.getRight(), sumSoFar));
+        node.setValue(node.getValue() + sumGreater(node.getRight(), sumSofar));
         return sumGreater(node.getLeft(), node.getValue());
     }
 
     public static void main(String[] args) {
-        TreeNode eight = new TreeNode(8);
-        TreeNode three = new TreeNode(3);
-        TreeNode ten = new TreeNode(10);
-
-        eight.setLeft(three);
-        eight.setRight(ten);
-
-        System.out.println(eight);
-        sumGreater(eight, 0);
-        System.out.println(eight);
+        int[] A = new int[]{1, 3, 4, 5, 11, 14, 15, 18, 20};
+        TreeNode root = Question03.reconstruct_inorder(A, 0, A.length - 1);
+        sumGreater(root, 0);
+        System.out.print(root);
     }
 }

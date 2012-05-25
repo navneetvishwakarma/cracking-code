@@ -32,7 +32,7 @@ public class Question03 {
 
     public static TreeNode reconstruct_inorder(int[] A, int start, int end) {
         if(start <= end) {
-            int mid = (int) Math.ceil((start + end)/2.0);
+            int mid = (start + end)/2;
             TreeNode node = new TreeNode(A[mid]);
             TreeNode leftNode = reconstruct_inorder(A, start, mid - 1);
             if(leftNode != null) {
