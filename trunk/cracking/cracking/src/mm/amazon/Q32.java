@@ -8,8 +8,8 @@ public class Q32 {
 
     /**
      * Idea is to have a runningSum and 2 pointers, i and j, that mark the start and end of the subarray. 
-     * while the runningSum is <= givenNum, keep incrementing j
-     * if runningSum is > givenNum, increment i  till runningSum <= givenNum
+     * while the runningSum is <= givenNum, keep adding the next number to the sum (by incrementing j)
+     * if runningSum is > givenNum, keep subtracting the numbers from the start (by incrementing i)
      * @param data
      * @param num
      */
