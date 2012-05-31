@@ -5,7 +5,14 @@ package mm.amazon;
  * Given an array having positive integers, find a continous subarray which adds to a given number
  */
 public class Q32 {
-    
+
+    /**
+     * Idea is to have a runningSum and 2 pointers, i and j, that mark the start and end of the subarray. 
+     * while the runningSum is <= givenNum, keep incrementing j
+     * if runningSum is > givenNum, increment i  till runningSum <= givenNum
+     * @param data
+     * @param num
+     */
     public static void continuousSubArray(int[] data, int num){
         int i = 0;
         int j = 0;
