@@ -91,6 +91,9 @@ Write an algorithm to find F(n) the number of bits set to 1, in all numbers from
 30) How do you check a Sudoku game to make sure all the rules have been respected?
 
 31) Find maximum subsequence from a list of numbers containing negative numbers.
+
+32)Given an array having positive integers, find a continous subarray which adds to a given number
+
 Eg. Max subseq in: {-10, 4, 14, -20, 23, 12, 11, -100} is 46 : {23, 12, 11}
 
 **) Given a binary search tree with each node's structure as follows:
