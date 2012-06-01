@@ -16,7 +16,7 @@ public class Question26 {
         int[] A = {0, 3, 5, 7, 8, 9, 11, 21, 29};
         TreeNode root = Question03.reconstruct_inorder(A, 0, A.length - 1);
         IterableBinaryTree iterator = new IterableBinaryTree(root);
-        while(iterator.hasNext()) {
+        while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
     }
@@ -29,7 +29,7 @@ class IterableBinaryTree {
     public IterableBinaryTree(TreeNode root) {
         stack = new Stack<TreeNode>();
         TreeNode curr = root;
-        while(curr != null) {
+        while (curr != null) {
             stack.push(curr);
             curr = curr.getLeft();
         }
@@ -41,15 +41,13 @@ class IterableBinaryTree {
 
     public Integer next() {
         Integer value = null;
-        if(!stack.empty()) {
+        if (!stack.empty()) {
             TreeNode node = stack.pop();
             value = node.getValue();
-            if(node.getRight() != null) {
-                TreeNode curr = node.getRight();
-                while(curr != null) {
-                    stack.push(curr);
-                    curr = curr.getLeft();
-                }
+            TreeNode curr = node.getRight();
+            while (curr != null) {
+                stack.push(curr);
+                curr = curr.getLeft();
             }
         }
         return value;

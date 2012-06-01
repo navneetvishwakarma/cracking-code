@@ -14,8 +14,10 @@ public class Question28 {
         // non-recursive way
         Set<String> substrings = new HashSet<String>();
         for(int i = 1; i <= str.length(); i++) {
+            // all substring starting at position 0, 1, 2 in j going up to i and i going from 1 to n
             for(int j = 0; j+i  <= str.length(); j++) {
                 String temp = "";
+                // substring is str[j : j + i - 1]
                 for(int k = j; k < j + i; k++) {
                     temp += str.charAt(k);
                 }
@@ -25,32 +27,31 @@ public class Question28 {
         return substrings;
     }
 
-    private static void subsets(Set<String> substrings, char[] chrs, int index) {
+    private static void subsets(Map<String, Integer> substrings, char[] chrs, int index) {
         if(index == chrs.length) {
             return;
         }
-        Set<String> substrings2 = new HashSet<String>(substrings);
-        for(String str : substrings2) {
-            if(str.length() > 0 && str.charAt(str.length() - 1) != chrs[index-1]) {
-                continue;
+        Map<String, Integer> substrings2 = new HashMap<String, Integer>(substrings);
+        for(String str : substrings2.keySet()) {
+            if (substrings.get(str) == -1 || substrings.get(str) == index - 1) {
+                str += chrs[index];
+                substrings.put(str, index);
             }
-            str += chrs[index];
-            substrings.add(str);
         }
         subsets(substrings, chrs, ++index);
     }
 
-    public static Set<String> subStrings2(String str) {
+    public static Map<String, Integer> subStrings2(String str) {
         // recursive way
-        Set<String> substrings = new HashSet<String>();
-        substrings.add("");
+        Map<String, Integer> substrings = new HashMap<String, Integer>();
+        substrings.put("", -1);
         subsets(substrings, str.toCharArray(), 0);
         return substrings;
     }
 
     public static void main(String[] args) {
-        Set<String> substrings = subStrings2("abcd");   // a, b, c, d, ab, bc, cd, abc, bcd, abcd
-        List<String> list = new ArrayList<String>(substrings);
+        Map<String, Integer> substrings = subStrings2("abcd");   // a, b, c, d, ab, bc, cd, abc, bcd, abcd
+        List<String> list = new ArrayList<String>(substrings.keySet());
         Collections.sort(list);
         for(String str : list) {
             System.out.println(str);
