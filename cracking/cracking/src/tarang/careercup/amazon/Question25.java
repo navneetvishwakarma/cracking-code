@@ -11,11 +11,18 @@ import tarang.datastructures.TreeNode;
 public class Question25 {
 
     public static boolean isMirror(TreeNode node1, TreeNode node2) {
-
-        return node1 == null && node2 == null ||
-                !(node1 == null || node2 == null)
-                        && node1.getValue() == node2.getValue() && isMirror(node1.getLeft(), node2.getRight()) && isMirror(node1.getRight(), node2.getLeft());
-
+        // check if both nodes are null, if they are, done.
+        // check neither are null and both have same value, proceed with comparing node1.left to node2.right
+        // and node2.left to node2.right
+        // otherwise return false
+        if(node1 == null && node2 == null) {
+            return true;
+        }
+        if(node1 == null || node2 == null) {
+            return false;
+        }
+        return (node1.getValue() == node2.getValue()) && isMirror(node1.getLeft(), node2.getRight())
+                && isMirror(node1.getRight(), node2.getLeft());
     }
 
     public static void main(String[] args) {
@@ -31,7 +38,7 @@ public class Question25 {
         TreeNode six1 = new TreeNode(6);
         TreeNode six2 = new TreeNode(6);
         TreeNode zero1 = new TreeNode(0);
-        TreeNode zero2 = new TreeNode(14);
+        TreeNode zero2 = new TreeNode(0);
         TreeNode one1 = new TreeNode(1);
         TreeNode one2 = new TreeNode(1);
 
