@@ -58,7 +58,8 @@ public class Q34 {
         else return ++i;
     }
 
-    //9 for base 10, 1 for base 2
+    //gets the max possible number for given base-digit pair
+    //999 for (10,3); 99 for (10,2) 
     public int getMaxCount(int base, int digits){
         int maxCount = 0;
         int maxNum = base - 1;
