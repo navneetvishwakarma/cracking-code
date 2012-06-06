@@ -15,7 +15,7 @@ import mm.ds.Node;
 
 
 /**
- * Put class JavaDoc here
+ * Given a circular linked list, implement an algorithm which returns node at the begin- ning of the loop
  *
  * @author mmathuria
  */
