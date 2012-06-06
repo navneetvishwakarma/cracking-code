@@ -1,6 +1,9 @@
 package mm.amazon;
 
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  There are two methods:
  void process(int[] A) and void enumerate(int base, int digits);
@@ -70,6 +73,12 @@ public class Q34 {
         return 0;
     }
     public static void main(String[] args) {
+        new Q34().enumerate(10, 1);
+
+        System.out.println("\n");
+        new Q34().enumerate(10, 2);
+
+        System.out.println("\n");
         new Q34().enumerate(2, 3);
     }
 }
