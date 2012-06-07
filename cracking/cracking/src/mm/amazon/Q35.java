@@ -11,6 +11,7 @@ public class Q35 {
             throw new Exception("lower > upper, something went horribly wrong");
         }
         
+        //base case: only 2 elements are left. return the min
         if(upper - lower == 1){
             return Math.min(a[lower],a[upper]);
         }
@@ -18,13 +19,16 @@ public class Q35 {
         int middle = (lower + upper) / 2;
         int middleEl = a[middle];
         
+        //find out the min of (lower,middle-1) and min of (middle+1,upper)
         int minLeftEl = Math.min(a[lower],a[middle-1]);
         int minRightEl = Math.min(a[middle+1],a[upper]);
         
+        //if middle is less than both, return
         if(middleEl < minLeftEl && middleEl < minRightEl){
             return middleEl;
         }
         
+        //jump to the half that has the min
         boolean leftHalfHasMin = minLeftEl < minRightEl;
         if(leftHalfHasMin){
             return minElement(a,lower,middle-1);
