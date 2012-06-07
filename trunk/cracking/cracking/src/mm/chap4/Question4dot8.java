@@ -49,9 +49,9 @@ public class Question4dot8 {
     }
 
     public static void main(String[] args) {
-        int[] a = {2,8,24,12,6,8,10,-12,16,18,14};
+        int[] a = {2,8,24,12,6,8,10,4,16,18,14};
         BinaryTree tree = new Question4dot3().createMinimalBT(a);
 
-        new Question4dot8().findPath(tree.getRoot(),100,new ArrayList<Integer>());
+        new Question4dot8().findPath(tree.getRoot(),16,new ArrayList<Integer>());
     }
 }
