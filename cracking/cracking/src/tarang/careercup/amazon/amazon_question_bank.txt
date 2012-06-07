@@ -119,6 +119,7 @@ Output:  5->4->3->2->1->8->7->6->NULL.
 base = 10, digits = 2. Call process() for all possible numbers with length 2 in base 10. There will be 100 of them. 
 So implement enumerate to call process. Cannot change signatures but can create your own methods.
 
+35) Find the min element in a rotated sorted array
 
 **) Given a binary search tree with each node's structure as follows:
 
