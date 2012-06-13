@@ -21,10 +21,8 @@ public class Q32 {
         while (j < data.length){
             sum += data[j++];
             
-            if(sum > num){
-                while (sum > num){
-                    sum -= data[i++];
-                }
+            while (sum > num){
+                sum -= data[i++];
             }
             
             if(sum == num){
@@ -48,6 +46,7 @@ public class Q32 {
         continuousSubArray(new int[]{1},2);
         continuousSubArray(new int[]{2},2);
         continuousSubArray(new int[]{3},2);
+        continuousSubArray(new int[]{12,14,3,2,10},5);
     }
 
 
