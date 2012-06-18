@@ -121,6 +121,12 @@ So implement enumerate to call process. Cannot change signatures but can create 
 
 35) Find the min element in a rotated sorted array
 
+36)
+Given an integer n , you have to print all the ways in which n can be represented as sum of positive integers.
+3 = 
+2 1
+1 1 1
+
 **) Given a binary search tree with each node's structure as follows:
 
 struct Node
