@@ -23,9 +23,37 @@ import mm.ds.TreeNode;
  */
 public class Question4dot6 {
 
+    static TreeNode result = null;
+            
     public static TreeNode findCommonAncestor(BinaryTree tree, TreeNode node1, TreeNode node2){
         if(tree == null) throw new IllegalStateException("Tree cannot be empty");
-        TreeNode ancestor = find(tree.getRoot(),node1, node2);
+        //TreeNode result = null;
+        find(tree.getRoot(),node1, node2);
+        return result;
+    }
+
+    private static boolean find(TreeNode current, TreeNode node1, TreeNode node2){
+        if(current == null) return false;
+        //System.out.print(current.getData() + ", ");
+
+        if(current.getData() == node1.getData()
+                || current.getData() == node2.getData()){
+            return true;
+        }
+
+        boolean left = find(current.getLeftChild(), node1, node2);
+        boolean right = find(current.getRightChild(), node1, node2);
+        
+        if(left && right){
+            result = current;
+        }
+        
+        return left || right;
+    }
+
+    public static TreeNode findCommonAncestor2(BinaryTree tree, TreeNode node1, TreeNode node2){
+        if(tree == null) throw new IllegalStateException("Tree cannot be empty");
+        TreeNode ancestor = find2(tree.getRoot(),node1, node2);
         if(ancestor!=null && (ancestor.getData() == node1.getData()
                 || ancestor.getData() == node2.getData())) {
             ancestor = null;
@@ -33,7 +61,7 @@ public class Question4dot6 {
         return ancestor;
     }
 
-    private static TreeNode find(TreeNode current, TreeNode node1, TreeNode node2){
+    private static TreeNode find2(TreeNode current, TreeNode node1, TreeNode node2){
         if(current == null) return null;
         //System.out.print(current.getData() + ", ");
 
@@ -42,8 +70,8 @@ public class Question4dot6 {
             return current;
         }
 
-        TreeNode left = find(current.getLeftChild(), node1, node2);
-        TreeNode right = find(current.getRightChild(), node1, node2);
+        TreeNode left = find2(current.getLeftChild(), node1, node2);
+        TreeNode right = find2(current.getRightChild(), node1, node2);
 
         if(left!= null && right != null){
             return current;
@@ -78,8 +106,8 @@ public class Question4dot6 {
 
         System.out.println(findCommonAncestor(tree, seven, six).data);  // 8
         System.out.println(findCommonAncestor(tree, one, six).data);    // 4
-        System.out.println(findCommonAncestor(tree, one, three));   // null
-        System.out.println(findCommonAncestor(tree, four, three));  // null
+        System.out.println(findCommonAncestor(tree, one, three));   // 9
+        System.out.println(findCommonAncestor(tree, four, three));  // 9
         System.out.println(findCommonAncestor(tree, seven, five));  // 8
         System.out.println(findCommonAncestor(tree, seven, three)); // 8
     }
