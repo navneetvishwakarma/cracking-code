@@ -127,6 +127,12 @@ Given an integer n , you have to print all the ways in which n can be represente
 2 1
 1 1 1
 
+37)Given two BST print the elements in sorted order
+
+38)A long array A[] is given to you. There is a sliding window of size w which is moving from the very left of the array to the very right. 
+You can only see the w numbers in the window. Each time the sliding window moves rightwards by one position. Following is an example:
+The array is [1 3 -1 -3 5 3 6 7], and w is 3.
+
 **) Given a binary search tree with each node's structure as follows:
 
 struct Node
