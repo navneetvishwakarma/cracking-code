@@ -3,8 +3,11 @@ package mm.chap2;
 import mm.ds.LinkedList;
 import mm.ds.Node;
 
+import java.util.ArrayDeque;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+
 
 
 /**
@@ -15,7 +18,7 @@ import java.util.Set;
  */
 public class Question2dot1 {
 
-    public LinkedList removeDups(LinkedList list){
+    public LinkedList removeDups2(LinkedList list){
         if(list == null || list.head == null){
             return null;
         }
@@ -31,6 +34,30 @@ public class Question2dot1 {
                 prev = current;
             }
             current = current.next();
+        }
+        prev.next = null;
+        return list;
+    }
+
+
+    public LinkedList removeDups(LinkedList list){
+        if(list == null || list.head == null){
+            return null;
+        }
+
+        Set<Integer> set = new HashSet<Integer>();
+        Node current = list.head.next;
+        Node prev = list.head;
+        set.add(prev.iData);
+        while(current != null){
+            if(set.contains(current.iData)){
+                current = current.next;
+                prev.next = current;
+            }else{
+                set.add(current.iData);
+                prev = current;
+                current = current.next;
+            }
         }
         prev.next = null;
         return list;
