@@ -41,13 +41,12 @@ public class Question4dot4 {
             return;
         }
 
-        LinkedList linkedList = null;
-        try {
-            linkedList = arrayList.get(level);
-        } catch (Exception e) {
+        LinkedList linkedList;
+        if(level > arrayList.size()-1){
             linkedList = new LinkedList();
             arrayList.add(linkedList);
         }
+        linkedList = arrayList.get(level);
         
         Node n = new Node(node.getData());
         linkedList.append(n);
