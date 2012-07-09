@@ -51,13 +51,12 @@ public class Question2dot1 {
         set.add(prev.iData);
         while(current != null){
             if(set.contains(current.iData)){
-                current = current.next;
-                prev.next = current;
+                prev.next = current.next;
             }else{
                 set.add(current.iData);
                 prev = current;
-                current = current.next;
             }
+            current = current.next;
         }
         prev.next = null;
         return list;
