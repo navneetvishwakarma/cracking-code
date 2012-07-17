@@ -1,8 +1,6 @@
 package mm.amazon;
 
 
-import sun.plugin.cache.CachedJarFile;
-
 /**
  * Find if the given string is a palindrome. E.g. "..AB ,, CD, ED. CB...A..." is a palindrome.
  *
