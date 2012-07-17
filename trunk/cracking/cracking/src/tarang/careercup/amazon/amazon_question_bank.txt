@@ -133,6 +133,16 @@ Given an integer n , you have to print all the ways in which n can be represente
 You can only see the w numbers in the window. Each time the sliding window moves rightwards by one position. Following is an example:
 The array is [1 3 -1 -3 5 3 6 7], and w is 3.
 
+39)
+Given a binary tree, print out the tree in zigzaag level order (ie, from L to R, then R to L for the next level and alternate between them). Ouput a newline
+after the end of each level
+
+Q40)
+We are given three strings: s1, s2, s3
+s3 is said to be a valid shuffle of s1 and s2 if it can be formed by interleaving the characters of s1 and s2 in a way that maintains the left to right ordering of the 
+characters from each string. s1="dude", s2="dog", valid s3="dodudeg"
+Write code that will detect if s3 is a valid shuffle of s1 and s2.
+
 **) Given a binary search tree with each node's structure as follows:
 
 struct Node
