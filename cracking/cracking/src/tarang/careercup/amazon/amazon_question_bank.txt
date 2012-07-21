@@ -143,6 +143,10 @@ s3 is said to be a valid shuffle of s1 and s2 if it can be formed by interleavin
 characters from each string. s1="dude", s2="dog", valid s3="dodudeg"
 Write code that will detect if s3 is a valid shuffle of s1 and s2.
 
+Q41)
+Find next higher number with same digits.
+Ex: given - 61543, output - 63145
+
 **) Given a binary search tree with each node's structure as follows:
 
 struct Node
