@@ -42,7 +42,7 @@ public class Question4dot4 {
         }
 
         LinkedList linkedList;
-        if(level > arrayList.size()-1){
+        if(level == arrayList.size()){
             linkedList = new LinkedList();
             arrayList.add(linkedList);
         }
