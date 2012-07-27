@@ -147,6 +147,12 @@ Q41)
 Find next higher number with same digits.
 Ex: given - 61543, output - 63145
 
+Q42)
+Merge 2 sorted linked lists.
+a: 5 --> 10 --> 15
+b: 2 --> 3 --> 20 --> 21
+output: 2 --> 3 --> 5--> 10--> 15--> 20 --> 21
+
 **) Given a binary search tree with each node's structure as follows:
 
 struct Node
