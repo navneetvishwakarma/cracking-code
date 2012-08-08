@@ -25,6 +25,26 @@ public class Q29 {
         if(str == null || str.length() == 0) throw new IllegalAccessError("String cannot be null or empty");
         
         char[] chars = str.toCharArray();
+        int j = 0;
+        int i = 0;
+        while(j < chars.length){
+            if(chars[j] != ' '){
+                chars[i++] = chars[j];
+            }else if(i > 0 && chars[i-1] != ' '){
+                chars[i++] = ' ';
+            }
+            j++;
+        }
+        
+        if(chars[i-1] == ' ')   i--;
+        
+        return new String(chars,0,i);
+    }
+    
+    public static String deleteExtraSpaces2(String str){
+        if(str == null || str.length() == 0) throw new IllegalAccessError("String cannot be null or empty");
+        
+        char[] chars = str.toCharArray();
         int i=0;
 
         boolean flag = (chars[0] == ' ');
@@ -47,9 +67,9 @@ public class Q29 {
     }
 
     public static void main(String[] args) {
-        System.out.println(deleteExtraSpaces("hello   world  ssup?  "));
-        System.out.println(deleteExtraSpaces("  hello   world  ssup?"));
-        System.out.println(deleteExtraSpaces("hello world!"));
+        System.out.println("'" + deleteExtraSpaces("hello   world  ssup?  ") + "'");
+        System.out.println("'" + deleteExtraSpaces("  hello   world  ssup?") + "'");
+        System.out.println("'" + deleteExtraSpaces("hello world!") + "'");
 
         System.out.println("\n\n");
         System.out.println(deleteSpaces("hello   world  ssup?  "));
