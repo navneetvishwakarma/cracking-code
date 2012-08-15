@@ -27,6 +27,21 @@ public class Question1dot4 {
     
     public boolean areAnagrams2(String str1, String str2){
         if(str1 == null || str2 == null) return false;
+        
+        if(str1.length() != str2.length()) return false;
+        
+        Map<Character, Integer> map1 = charToCountMap(str1);
+        for(char c : str2.toCharArray()){
+            Integer count = map1.get(c);
+            if(count == null || count <= 0) return false;
+            map1.put(c,--count);
+        }
+        
+        return true;
+    }
+
+    public boolean areAnagrams3(String str1, String str2){
+        if(str1 == null || str2 == null) return false;
 
         Map<Character,Integer> map1 = charToCountMap(str1);
         Map<Character,Integer> map2 = charToCountMap(str2);
